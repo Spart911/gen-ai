@@ -1,0 +1,602 @@
+[
+  {
+    "full_name": "Новикова Елена Дмитриевна",
+    "age": 35,
+    "address": {
+      "city": "Воронеж",
+      "district": "Железнодорожный"
+    },
+    "speciality": "логопед",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2009
+  },
+  {
+    "full_name": "Морозова Татьяна Алексеевна",
+    "age": 42,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Кировский район"
+    },
+    "speciality": "медсестра",
+    "desired_course": "Медицинское дело",
+    "years_of_experience": 18,
+    "graduation_year": 2004
+  },
+  {
+    "full_name": "Егоров Иван Сергеевич",
+    "age": 35,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский"
+    },
+    "speciality": "инженер",
+    "desired_course": "Информационные технологии в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Голубева Наталья Викторовна",
+    "age": 30,
+    "address": {
+      "city": "Красноярск",
+      "district": "Советский район"
+    },
+    "speciality": "воспитатель",
+    "desired_course": "Дошкольная педагогика",
+    "years_of_experience": 7,
+    "graduation_year": 2016
+  },
+  {
+    "full_name": "Кузнецов Алексей Павлович",
+    "age": 35,
+    "address": {
+      "city": "Самара",
+      "district": "Кировский район"
+    },
+    "speciality": "социальный работник",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Зайцева Екатерина Олеговна",
+    "age": 35,
+    "address": {
+      "city": "Краснодар",
+      "district": "Прикубанский"
+    },
+    "speciality": "учитель начальных классов",
+    "desired_course": "Педагогика и методика начального образования",
+    "years_of_experience": 12,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Козлов Дмитрий Андреевич",
+    "age": 35,
+    "address": {
+      "city": "Казань",
+      "district": "Советский"
+    },
+    "speciality": "инженер",
+    "desired_course": "Информационные технологии в образовании",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Сергеев Дмитрий Алексеевич",
+    "age": 35,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "speciality": "психолог",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Соколов Алексей Иванович",
+    "age": 35,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Кировский район"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Павлова Анна Сергеевна",
+    "age": 35,
+    "address": {
+      "city": "Уфа",
+      "district": "Кировский"
+    },
+    "speciality": "логопед",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Комаров Сергей Павлович",
+    "age": 45,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Советский район"
+    },
+    "speciality": "психолог",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 20,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Виноградов Алексей Сергеевич",
+    "age": 35,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Ворошиловский район"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Никитин Сергей Владимирович",
+    "age": 35,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский"
+    },
+    "speciality": "экономист",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Комаров Дмитрий Олегович",
+    "age": 35,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Ленинский район"
+    },
+    "speciality": "юрист",
+    "desired_course": "Правовое обеспечение",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Волкова Анастасия Владимировна",
+    "age": 47,
+    "address": {
+      "city": "Красноярск",
+      "district": "Советский район"
+    },
+    "speciality": "медсестра",
+    "desired_course": "Медицинское дело",
+    "years_of_experience": 20,
+    "graduation_year": 1999
+  },
+  {
+    "full_name": "Васильев Игорь Петрович",
+    "age": 30,
+    "address": {
+      "city": "Краснодар",
+      "district": "Прикубанский"
+    },
+    "speciality": "инженер",
+    "desired_course": "Информационные технологии в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2015
+  },
+  {
+    "full_name": "Фёдорова Ольга Игоревна",
+    "age": 40,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский район"
+    },
+    "speciality": "медсестра",
+    "desired_course": "Медицинское дело",
+    "years_of_experience": 15,
+    "graduation_year": 2007
+  },
+  {
+    "full_name": "Семёнов Андрей Олегович",
+    "age": 35,
+    "address": {
+      "city": "Воронеж",
+      "district": "Ленинский"
+    },
+    "speciality": "юрист",
+    "desired_course": "Правовое обеспечение",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Белова Елена Викторовна",
+    "age": 35,
+    "address": {
+      "city": "Красноярск",
+      "district": "Советский район"
+    },
+    "speciality": "учитель начальных классов",
+    "desired_course": "Педагогика и методика начального образования",
+    "years_of_experience": 13,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Козлов Сергей Николаевич",
+    "age": 45,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Кировский район"
+    },
+    "speciality": "психолог",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 20,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Медведева Ольга Дмитриевна",
+    "age": 30,
+    "address": {
+      "city": "Уфа",
+      "district": "Октябрьский район"
+    },
+    "speciality": "медсестра",
+    "desired_course": "Медицинское дело",
+    "years_of_experience": 8,
+    "graduation_year": 2016
+  },
+  {
+    "full_name": "Лебедев Андрей Михайлович",
+    "age": 35,
+    "address": {
+      "city": "Красноярск",
+      "district": "Советский"
+    },
+    "speciality": "социальный работник",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Фёдоров Иван Алексеевич",
+    "age": 32,
+    "address": {
+      "city": "Самара",
+      "district": "Октябрьский"
+    },
+    "speciality": "логопед",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 8,
+    "graduation_year": 2014
+  },
+  {
+    "full_name": "Соколова Ирина Алексеевна",
+    "age": 35,
+    "address": {
+      "city": "Уфа",
+      "district": "Октябрьский район"
+    },
+    "speciality": "воспитатель",
+    "desired_course": "Дошкольная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Фёдоров Виктор Павлович",
+    "age": 35,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Октябрьский"
+    },
+    "speciality": "воспитатель",
+    "desired_course": "Дошкольная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Зайцев Алексей Иванович",
+    "age": 35,
+    "address": {
+      "city": "Москва",
+      "district": "Арбат"
+    },
+    "speciality": "экономист",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Крылов Илья Фёдорович",
+    "age": 34,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Октябрьский"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 12,
+    "graduation_year": 2013
+  },
+  {
+    "full_name": "Попов Игорь Владимирович",
+    "age": 35,
+    "address": {
+      "city": "Москва",
+      "district": "Тверской район"
+    },
+    "speciality": "юрист",
+    "desired_course": "Правовое обеспечение",
+    "years_of_experience": 12,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Зайцев Игорь Викторович",
+    "age": 35,
+    "address": {
+      "city": "Казань",
+      "district": "Советский"
+    },
+    "speciality": "экономист",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Орлова Екатерина Павловна",
+    "age": 35,
+    "address": {
+      "city": "Самара",
+      "district": "Октябрьский"
+    },
+    "speciality": "воспитатель",
+    "desired_course": "Дошкольная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Козлов Алексей Михайлович",
+    "age": 34,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Нижегородский район"
+    },
+    "speciality": "социальный работник",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Соколов Дмитрий Александрович",
+    "age": 40,
+    "address": {
+      "city": "Краснодар",
+      "district": "Прикубанский район"
+    },
+    "speciality": "юрист",
+    "desired_course": "Правовое обеспечение",
+    "years_of_experience": 15,
+    "graduation_year": 2006
+  },
+  {
+    "full_name": "Соколов Иван Петрович",
+    "age": 35,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Октябрьский район"
+    },
+    "speciality": "инженер",
+    "desired_course": "Информационные технологии в образовании",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Фёдоров Алексей Дмитриевич",
+    "age": 35,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Сормовский район"
+    },
+    "speciality": "экономист",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Семёнов Дмитрий Алексеевич",
+    "age": 35,
+    "address": {
+      "city": "Самара",
+      "district": "Промышленный район"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 12,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Николаева Анна Ивановна",
+    "age": 35,
+    "address": {
+      "city": "Воронеж",
+      "district": "Советский"
+    },
+    "speciality": "воспитатель",
+    "desired_course": "Дошкольная педагогика",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Лебедева Ольга Сергеевна",
+    "age": 35,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Ленинский район"
+    },
+    "speciality": "психолог",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 12,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Соколов Максим Андреевич",
+    "age": 35,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "speciality": "инженер",
+    "desired_course": "Информационные технологии в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Фёдорова Марина Игоревна",
+    "age": 28,
+    "address": {
+      "city": "Краснодар",
+      "district": "Прикубанский округ"
+    },
+    "speciality": "учитель начальных классов",
+    "desired_course": "Педагогика и методика начального образования",
+    "years_of_experience": 4,
+    "graduation_year": 2018
+  },
+  {
+    "full_name": "Беляев Андрей Сергеевич",
+    "age": 45,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Василеостровский район"
+    },
+    "speciality": "психолог",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 23,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Козлова Анна Сергеевна",
+    "age": 35,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Сормовский район"
+    },
+    "speciality": "логопед",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 12,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Морозова Анна Дмитриевна",
+    "age": 35,
+    "address": {
+      "city": "Казань",
+      "district": "Вахитовский район"
+    },
+    "speciality": "медсестра",
+    "desired_course": "Медицинское дело",
+    "years_of_experience": 13,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Соколова Мария Александровна",
+    "age": 35,
+    "address": {
+      "city": "Казань",
+      "district": "Приволжский район"
+    },
+    "speciality": "учитель начальных классов",
+    "desired_course": "Педагогика и методика начального образования",
+    "years_of_experience": 12,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Фёдоров Илья Дмитриевич",
+    "age": 35,
+    "address": {
+      "city": "Уфа",
+      "district": "Кировский район"
+    },
+    "speciality": "учитель начальных классов",
+    "desired_course": "Педагогика и методика начального образования",
+    "years_of_experience": 10,
+    "graduation_year": 2009
+  },
+  {
+    "full_name": "Белов Иван Сергеевич",
+    "age": 35,
+    "address": {
+      "city": "Краснодар",
+      "district": "Прикубанский округ"
+    },
+    "speciality": "социальный работник",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Егоров Дмитрий Алексеевич",
+    "age": 32,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Советский район"
+    },
+    "speciality": "экономист",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 5,
+    "graduation_year": 2015
+  },
+  {
+    "full_name": "Орлов Дмитрий Николаевич",
+    "age": 38,
+    "address": {
+      "city": "Воронеж",
+      "district": "Ленинский район"
+    },
+    "speciality": "юрист",
+    "desired_course": "Правовое обеспечение",
+    "years_of_experience": 10,
+    "graduation_year": 2008
+  },
+  {
+    "full_name": "Николаев Дмитрий Александрович",
+    "age": 35,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Советский район"
+    },
+    "speciality": "социальный работник",
+    "desired_course": "Менеджмент в образовании",
+    "years_of_experience": 10,
+    "graduation_year": 2012
+  },
+  {
+    "full_name": "Новиков Николай Андреевич",
+    "age": 35,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Кировский"
+    },
+    "speciality": "логопед",
+    "desired_course": "Коррекционная педагогика",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Соколов Дмитрий Петрович",
+    "age": 35,
+    "address": {
+      "city": "Уфа",
+      "district": "Октябрьский район"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "Бухгалтерский учёт и налогообложение",
+    "years_of_experience": 10,
+    "graduation_year": 2010
+  }
+]

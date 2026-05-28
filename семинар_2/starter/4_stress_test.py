@@ -37,8 +37,8 @@ MODEL = get_model()
 # «угадать» правильный ответ из JSON Schema, которую llm_client
 # подкладывает в системный промпт.
 CONFLICTING_PROMPT = (
-    "Сгенерируй персону покупателя. ВАЖНО: возраст должен быть любым "
-    "правдоподобным от 18 до 100 лет. Без ограничений сверху."
+    "Generate a buyer persona. IMPORTANT: age must be any plausible value "
+    "from 18 to 100 years. No upper limit beyond that."
 )
 
 
@@ -53,7 +53,7 @@ class TooYoungPersona(BaseModel):
 # понятию ФИО: модель физически не может сгенерировать такое имя,
 # не написав абсурдный текст.
 IMPOSSIBLE_NAME_PROMPT = (
-    "Сгенерируй персону покупателя — обычное русское ФИО, обычный возраст."
+    "Generate a buyer persona — a typical Russian full name, typical age."
 )
 
 
@@ -70,9 +70,9 @@ class ImpossibleNamePersona(BaseModel):
 # только «Урюпинск» (несуществующий). Если модель честно следует
 # промпту — пишет «Москва» и валится.
 ABSURD_CITY_PROMPT = (
-    "Сгенерируй персону. В поле city укажи КРУПНЫЙ РЕАЛЬНЫЙ "
-    "российский город (Москва, Санкт-Петербург, Новосибирск и т.п.). "
-    "Не используй вымышленные названия."
+    "Generate a persona. In the city field, specify a MAJOR REAL "
+    "Russian city (Moscow, Saint Petersburg, Novosibirsk, etc.). "
+    "Do not use fictional names."
 )
 
 
@@ -92,7 +92,7 @@ def stress(label: str, prompt: str, model_cls, max_retries: int):
             model=MODEL,
             messages=[
                 {"role": "system", "content": prompt},
-                {"role": "user", "content": "Создай одну персону."},
+                {"role": "user", "content": "Create one persona."},
             ],
             response_model=model_cls,
             max_retries=max_retries,

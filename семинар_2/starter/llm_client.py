@@ -175,12 +175,12 @@ class _Completions:
         schema_str = json.dumps(schema, ensure_ascii=False, indent=2)
 
         addendum = (
-            f"\n\nОтвечай ОДНИМ валидным JSON-объектом по схеме:\n{schema_str}\n"
-            "ТОЛЬКО JSON. Никакого текста до/после, никакого markdown, "
-            "никаких комментариев, никаких повторных объектов."
+            f"\n\nRespond with ONE valid JSON object matching this schema:\n{schema_str}\n"
+            "JSON ONLY. No text before or after, no markdown, "
+            "no comments, no duplicate objects."
         )
         if wrap_list:
-            addendum += " Массив верни в поле `items`."
+            addendum += " Return the array in the `items` field."
 
         msgs = [dict(m) for m in messages]
         sys_i = next((i for i, m in enumerate(msgs) if m["role"] == "system"), None)
@@ -245,7 +245,7 @@ class _Completions:
                 msgs.append(
                     {
                         "role": "user",
-                        "content": f"Невалидный ответ: {e}. Верни ТОЛЬКО один корректный JSON по схеме.",
+                        "content": f"Invalid response: {e}. Return ONLY one correct JSON object matching the schema.",
                     }
                 )
         assert last_err is not None

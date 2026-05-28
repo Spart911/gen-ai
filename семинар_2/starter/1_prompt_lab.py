@@ -23,26 +23,26 @@ from llm_client import get_model, make_raw_client
 
 client = make_raw_client()
 MODEL = get_model()
-USER_PROMPT = "Создай одну персону."
+USER_PROMPT = "Create one persona."
 
-# Три варианта SYSTEM_PROMPT.
+# Three SYSTEM_PROMPT variants.
 PROMPTS = {
     "naive": (
-        "Ты генерируешь синтетические персоны покупателей российского "
-        "e-commerce. Создай правдоподобного человека: укажи имя, возраст, "
-        "город, месячный доход, род занятий, как часто он покупает онлайн "
-        "и любимую категорию товаров. Ответ верни в формате JSON."
+        "You generate synthetic buyer personas for Russian e-commerce. "
+        "Create a plausible person: provide name, age, city, monthly income, "
+        "occupation, how often they shop online, and their favorite product "
+        "category. Return the response as JSON."
     ),
     "structured": (
-        "Сгенерируй персону покупателя российского e-commerce. Верни JSON "
-        "с полями: name (строка), age (число), city (строка), income_rub "
-        "(число), occupation (строка), shopping_frequency (строка), "
-        "preferred_category (строка)."
+        "Generate a buyer persona for Russian e-commerce. Return JSON "
+        "with fields: name (string), age (number), city (string), income_rub "
+        "(number), occupation (string), shopping_frequency (string), "
+        "preferred_category (string)."
     ),
     "strict": (
-        "Ты — генератор JSON. ВСЕГДА возвращай ТОЛЬКО валидный JSON-объект, "
-        "без markdown, без комментариев, без текста до или после.\n"
-        "Поля:\n"
+        "You are a JSON generator. ALWAYS return ONLY a valid JSON object, "
+        "no markdown, no comments, no text before or after.\n"
+        "Fields:\n"
         "- name (string)\n"
         "- age (integer, 18-75)\n"
         "- city (string)\n"
@@ -50,7 +50,7 @@ PROMPTS = {
         "- occupation (string)\n"
         "- shopping_frequency (string)\n"
         "- preferred_category (string)\n"
-        "ВСЕ числа — integer, не string. Без markdown-обёрток."
+        "ALL numbers must be integers, not strings. No markdown wrappers."
     ),
 }
 

@@ -28,15 +28,15 @@ with open("seed_examples.json", encoding="utf-8") as f:
 def build_few_shot_prompt(n_shots: int = 2) -> str:
     """Собрать SYSTEM_PROMPT с n примерами «правильного» ответа."""
     examples = "\n\n".join(
-        f"Пример {i + 1}:\n{json.dumps(s, ensure_ascii=False, indent=2)}"
+        f"Example {i + 1}:\n{json.dumps(s, ensure_ascii=False, indent=2)}"
         for i, s in enumerate(SEEDS[:n_shots])
     )
     return (
-        "Ты — генератор синтетических покупательских персон для российского "
-        "e-commerce. Верни ОДИН JSON-объект с теми же полями, что в "
-        "примерах ниже. Никаких пояснений, никакого markdown.\n\n"
+        "You generate synthetic buyer personas for Russian e-commerce. "
+        "Return ONE JSON object with the same fields as in the examples below. "
+        "No explanations, no markdown.\n\n"
         f"{examples}\n\n"
-        "Сгенерируй НОВУЮ персону в том же формате."
+        "Generate a NEW persona in the same format."
     )
 
 
@@ -59,7 +59,7 @@ def run(n_shots: int, n_runs: int = 5) -> dict:
             model=MODEL,
             messages=[
                 {"role": "system", "content": sys_prompt},
-                {"role": "user", "content": "Создай одну персону."},
+                {"role": "user", "content": "Create one persona."},
             ],
             # JSON mode уже включён — это раунд 1
             response_format={"type": "json_object"},

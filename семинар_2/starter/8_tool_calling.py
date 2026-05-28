@@ -54,7 +54,7 @@ def generate_via_tools() -> Persona:
     # TODO: вызвать client.chat.completions.create с параметрами:
     #   - tools=[TOOL_SCHEMA]
     #   - tool_choice={"type": "function", "function": {"name": "register_persona"}}
-    #   - messages: system из prompts.SYSTEM_PROMPT + user "Создай одну персону."
+    #   - messages: system from prompts.SYSTEM_PROMPT + user "Create one persona."
     response = ...
 
     # Извлекаем аргументы вызова и валидируем Pydantic'ом.

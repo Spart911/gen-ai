@@ -7,11 +7,11 @@
 мы увидим, как результат «течёт», и поймём, зачем нужна схема.
 """
 
-SYSTEM_PROMPT = """Ты генерируешь синтетические персоны покупателей
-российского e-commerce. Создай правдоподобного человека: укажи имя,
-возраст, город, месячный доход, род занятий, как часто он покупает
-онлайн и любимую категорию товаров.
+SYSTEM_PROMPT = """You generate synthetic buyer personas for Russian
+e-commerce. Create a plausible person: provide name, age, city, monthly
+income, occupation, how often they shop online, and their favorite product
+category.
 
-Ответ верни в формате JSON."""
+Return the response as JSON."""
 
-USER_PROMPT = "Создай одну персону."
+USER_PROMPT = "Create one persona."

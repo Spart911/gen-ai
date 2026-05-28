@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Анна Иванова",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Тверской"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Алексей",
+    "age": 30,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 150000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна Смирнова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 75000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Смирнова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Екатерина Смирнова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 30,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "косметика"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Александр",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна Соколова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Тверской"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "косметика"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 30,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 100000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Алексей Смирнов",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "инженер",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Алексей Смирнов",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Тверской"
+    },
+    "income_rub": 150000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Алексей Иванов",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Иван",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Екатерина",
+    "age": 34,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Невский"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Тверской"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Смирнова",
+    "age": 29,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 150000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 75000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "косметика"
+  },
+  {
+    "name": "Анна",
+    "age": 30,
+    "address": {
+      "city": "Москва",
+      "district": "ЦАО"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Смирнова",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Смирнова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Иван",
+    "age": 30,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 100000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Алексей Смирнов",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "IT-специалист",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна",
+    "age": 32,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 85000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Иван",
+    "age": 34,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "электроника"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 75000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Иванова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Мария",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 90000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна Петрова",
+    "age": 29,
+    "address": {
+      "city": "Москва",
+      "district": "Хамовники"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Екатерина Смирнова",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 120000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  },
+  {
+    "name": "Анна",
+    "age": 28,
+    "address": {
+      "city": "Москва",
+      "district": "Центральный"
+    },
+    "income_rub": 80000,
+    "occupation": "менеджер",
+    "shopping_frequency": "часто",
+    "preferred_category": "одежда"
+  }
+]
