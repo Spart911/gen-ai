@@ -1,0 +1,54 @@
+{
+  "model": "deepseek-v4-flash",
+  "corpus_chars": 24197,
+  "runs": [
+    {
+      "label": "1_cold",
+      "prompt": "original",
+      "prompt_tokens": 9003,
+      "completion_tokens": 14247,
+      "cache_hit": 8960,
+      "cache_miss": 43,
+      "time": 141.34864902496338,
+      "cost_usd": 0.00412062
+    },
+    {
+      "label": "2_repeat",
+      "prompt": "original",
+      "prompt_tokens": 9003,
+      "completion_tokens": 9209,
+      "cache_hit": 8960,
+      "cache_miss": 43,
+      "time": 184.0240340232849,
+      "cost_usd": 0.0027099800000000003
+    },
+    {
+      "label": "3_modified_prompt",
+      "prompt": "modified",
+      "prompt_tokens": 9033,
+      "completion_tokens": 9935,
+      "cache_hit": 8960,
+      "cache_miss": 73,
+      "time": 192.36095881462097,
+      "cost_usd": 0.00291746
+    },
+    {
+      "label": "4_restored",
+      "prompt": "original",
+      "prompt_tokens": 9003,
+      "completion_tokens": 9142,
+      "cache_hit": 8960,
+      "cache_miss": 43,
+      "time": 56.84765911102295,
+      "cost_usd": 0.0026912200000000002
+    }
+  ],
+  "summary": {
+    "run1_cost_usd": 0.004121,
+    "run2_cost_usd": 0.00271,
+    "run2_cache_hit_pct": 99.5,
+    "savings_run2_vs_run1_usd": 0.001411,
+    "run3_cache_hit_pct": 99.2,
+    "run4_cache_hit_pct": 99.5
+  }
+}

@@ -1,0 +1,48 @@
+author,rating,store,review_date,title,n_issues,issue_categories
+Анна С.,2,App Store,2026-02-05,Проблемы с доставкой и приложением,3,reliability;reliability;other
+Иван К.,2,App Store,2026-04-04,,2,reliability;support
+Дмитрий П.,1,App Store,2026-05-10,Обман с ценами и доставкой,3,price;price;other
+Ольга М.,3,App Store,2026-03-24,,3,price;reliability;price
+Виктория Л.,4,RuStore,2026-03-16,,2,price;support
+Максим Т.,2,RuStore,2026-05-21,Проблемы с поддержкой,2,reliability;support
+Алексей Н.,4,App Store,2026-02-16,,4,reliability;support;reliability;reliability
+Елена В.,4,App Store,2026-03-17,,1,support
+Сергей Р.,2,Google Play,2026-04-17,,3,design;design;design
+Кирилл Д.,4,Google Play,2026-05-26,,2,reliability;support
+Екатерина М.,5,Google Play,2026-02-28,Отличное приложение для заказа еды,3,design;reliability;price
+Павел И.,3,App Store,2026-05-15,"Неплохо, но есть вопросы к интерфейсу",4,design;design;performance;design
+Илья Б.,3,App Store,2026-04-08,,3,reliability;support;reliability
+Наталья С.,1,Google Play,2026-04-13,Бесконечный спам!,1,ads
+Татьяна Г.,1,RuStore,2026-03-20,,5,price;price;price;price;price
+Михаил Д.,3,RuStore,2026-04-30,,1,performance
+Ирина Т.,5,RuStore,2026-05-26,,1,ads
+Алина Р.,5,RuStore,2026-03-28,,1,support
+Светлана П.,1,Google Play,2026-04-17,,3,price;price;reliability
+Дмитрий К.,5,Google Play,2026-04-28,"Дороговато, но качество",4,price;price;reliability;price
+Ольга В.,4,App Store,2026-05-28,,3,reliability;other;support
+Олег С.,2,RuStore,2026-02-12,,2,performance;reliability
+Ольга Н.,4,RuStore,2026-02-25,"Хорошо, но есть нюансы",2,performance;reliability
+Ольга П.,4,Google Play,2026-02-15,,1,support
+Олег В.,2,RuStore,2026-02-28,,3,reliability;reliability;performance
+Ольга Р.,2,RuStore,2026-03-28,"Слишком медленно, частые вылеты",1,performance
+Сергей В.,1,Google Play,2026-02-15,,1,support
+Максим С.,5,App Store,2026-02-05,Полезные уведомления,1,other
+Ольга Г.,1,Google Play,2026-03-22,,3,support;support;performance
+Ольга С.,4,App Store,2026-03-28,,2,support;other
+Ольга К.,2,Google Play,2026-01-31,,4,design;design;design;performance
+Сергей М.,4,RuStore,2026-03-20,"Много спама, но само приложение неплохое",1,ads
+Антон Г.,3,App Store,2026-05-19,,3,design;design;other
+Сергей И.,3,RuStore,2026-04-06,Тормозит и вылетает,1,performance
+Оксана Л.,2,App Store,2026-05-11,Дорого и непрозрачно,3,price;reliability;price
+Ольга З.,3,Google Play,2026-01-31,,1,ads
+Полина В.,2,App Store,2026-05-27,"Неплохо, но есть проблемы",4,performance;reliability;reliability;support
+Светлана М.,3,RuStore,2026-02-16,,4,reliability;performance;support;reliability
+Артём Л.,5,App Store,2026-02-07,Отличный дизайн и тёмная тема,3,design;design;other
+Игорь С.,4,RuStore,2026-03-31,"Хороший дизайн, но есть мелкие недочёты",4,design;design;design;design
+Мария С.,5,App Store,2026-02-14,,5,reliability;reliability;other;other;design
+Максим Г.,1,Google Play,2026-05-05,Заказ пропал после оплаты,3,reliability;support;price
+Максим Д.,5,App Store,2026-04-16,,1,design
+Максим В.,1,Google Play,2026-05-26,,2,performance;reliability
+Максим Р.,3,Google Play,2026-05-26,,2,price;price
+Максим Л.,3,Google Play,2026-02-19,Слишком много уведомлений,1,ads
+Максим К.,1,Google Play,2026-05-07,Спам-рассылка,2,ads;ads
