@@ -1,0 +1,205 @@
+{
+  "k": 5,
+  "retrieval": "hybrid = ChromaDB dense + BM25 + RRF",
+  "strategies": {
+    "fixed": {
+      "description": "text[i:i+2000], без overlap",
+      "chunk_count": 85,
+      "hit_rate_hybrid": 1.0,
+      "hit_rate_dense_only": 0.9666666666666667,
+      "avg_gold_rank_hybrid": 1.17
+    },
+    "recursive": {
+      "description": "RecursiveCharacterTextSplitter(400, overlap=80)",
+      "chunk_count": 594,
+      "hit_rate_hybrid": 1.0,
+      "hit_rate_dense_only": 0.9666666666666667,
+      "avg_gold_rank_hybrid": 1.72
+    }
+  },
+  "per_question": [
+    {
+      "id": 1,
+      "type": "multi-hop / синоним",
+      "gold_sources": [
+        "doc_01_ru_openai_context_memory",
+        "doc_03_ru_openai_tools_rag_prompts"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 0.5,
+      "recursive_dense": 0.5,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 2,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_01_ru_openai_context_memory"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 3,
+      "type": "перефраз",
+      "gold_sources": [
+        "doc_01_ru_openai_context_memory"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 4,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_02_ru_chatgpt_bot_streaming"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 5,
+      "type": "точный артикул",
+      "gold_sources": [
+        "doc_03_ru_openai_tools_rag_prompts"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 6,
+      "type": "multi-hop",
+      "gold_sources": [
+        "doc_01_ru_openai_context_memory",
+        "doc_04_ru_llm_hardware_vision"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 7,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_04_ru_llm_hardware_vision"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 8,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_05_ru_ml_learning_resources"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 9,
+      "type": "синоним",
+      "gold_sources": [
+        "doc_06_ru_neural_network_1d_array"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 10,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_07_ru_sentiment_classifier_comparison"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 11,
+      "type": "multi-hop / перефраз",
+      "gold_sources": [
+        "doc_08_ru_pandas_no_loops",
+        "doc_09_ru_pandas_consecutive_values"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 12,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_10_ru_pandas_rolling_average"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 13,
+      "type": "перефраз",
+      "gold_sources": [
+        "doc_11_ru_pandas_count_until_value"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 14,
+      "type": "точный артикул",
+      "gold_sources": [
+        "doc_12_ru_sklearn_validation_regression"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    },
+    {
+      "id": 15,
+      "type": "прямой",
+      "gold_sources": [
+        "doc_12_ru_sklearn_validation_regression"
+      ],
+      "fixed_hybrid": 1.0,
+      "recursive_hybrid": 1.0,
+      "fixed_dense": 1.0,
+      "recursive_dense": 1.0,
+      "hybrid_diff": 0.0
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+[
+  {
+    "doc_id": "doc_01_ru_openai_context_memory",
+    "order": 1,
+    "title": "ChatGPT API: контекст, память диалога и зацикливание ответов",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1517104,
+        "title": "Chat GPT api, ответ только по определенной теме",
+        "url": "https://ru.stackoverflow.com/questions/1517104/chat-gpt-api-%d0%be%d1%82%d0%b2%d0%b5%d1%82-%d1%82%d0%be%d0%bb%d1%8c%d0%ba%d0%be-%d0%bf%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d0%be%d0%b9-%d1%82%d0%b5%d0%bc%d0%b5",
+        "tags": [
+          "python",
+          "chatgpt",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Ruty (https://ru.stackoverflow.com/users/467005/ruty)",
+        "answer_ids": [
+          1576470,
+          1586438
+        ],
+        "answer_authors": [
+          "Трипольский Пётр (https://ru.stackoverflow.com/users/233158/%d0%a2%d1%80%d0%b8%d0%bf%d0%be%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b9-%d0%9f%d1%91%d1%82%d1%80)",
+          "pazukdev (https://ru.stackoverflow.com/users/258227/pazukdev)"
+        ]
+      },
+      {
+        "question_id": 1532792,
+        "title": "ChatGPT API Отвечает самому себе, и генерирует ответы пока не закончатся токены",
+        "url": "https://ru.stackoverflow.com/questions/1532792/chatgpt-api-%d0%9e%d1%82%d0%b2%d0%b5%d1%87%d0%b0%d0%b5%d1%82-%d1%81%d0%b0%d0%bc%d0%be%d0%bc%d1%83-%d1%81%d0%b5%d0%b1%d0%b5-%d0%b8-%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b8%d1%80%d1%83%d0%b5%d1%82-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d1%8b-%d0%bf%d0%be%d0%ba%d0%b0-%d0%bd%d0%b5-%d0%b7%d0%b0%d0%ba%d0%be%d0%bd%d1%87%d0%b0%d1%82%d1%81%d1%8f-%d1%82%d0%be%d0%ba%d0%b5%d0%bd%d1%8b",
+        "tags": [
+          "c#",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "podpivasic (https://ru.stackoverflow.com/users/561924/podpivasic)",
+        "answer_ids": [
+          1533883
+        ],
+        "answer_authors": [
+          "user547996"
+        ]
+      },
+      {
+        "question_id": 1564968,
+        "title": "openai запоминание предыдущих ответов",
+        "url": "https://ru.stackoverflow.com/questions/1564968/openai-%d0%b7%d0%b0%d0%bf%d0%be%d0%bc%d0%b8%d0%bd%d0%b0%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d0%b5%d0%b4%d1%8b%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d0%be%d0%b2",
+        "tags": [
+          "python",
+          "telebot",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Fred Hindey (https://ru.stackoverflow.com/users/582588/fred-hindey)",
+        "answer_ids": [
+          1576469
+        ],
+        "answer_authors": [
+          "Трипольский Пётр (https://ru.stackoverflow.com/users/233158/%d0%a2%d1%80%d0%b8%d0%bf%d0%be%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b9-%d0%9f%d1%91%d1%82%d1%80)"
+        ]
+      },
+      {
+        "question_id": 1558305,
+        "title": "Как сделать так, чтобы GPT API (Chat-GPT) запоминал контекст разговора в чате телеграм?",
+        "url": "https://ru.stackoverflow.com/questions/1558305/%d0%9a%d0%b0%d0%ba-%d1%81%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c-%d1%82%d0%b0%d0%ba-%d1%87%d1%82%d0%be%d0%b1%d1%8b-gpt-api-chat-gpt-%d0%b7%d0%b0%d0%bf%d0%be%d0%bc%d0%b8%d0%bd%d0%b0%d0%bb-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%ba%d1%81%d1%82-%d1%80%d0%b0%d0%b7%d0%b3%d0%be%d0%b2%d0%be%d1%80%d0%b0-%d0%b2-%d1%87%d0%b0%d1%82%d0%b5-%d1%82%d0%b5",
+        "tags": [
+          "python",
+          "aiogram-3.x",
+          "python-openai",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "user578345 (https://ru.stackoverflow.com/users/578345/user578345)",
+        "answer_ids": [
+          1558435
+        ],
+        "answer_authors": [
+          "JustAQ (https://ru.stackoverflow.com/users/578409/justaq)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_02_ru_chatgpt_bot_streaming",
+    "order": 2,
+    "title": "ChatGPT в Telegram-ботах: скорость ответа, печать по буквам и асинхронность",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1496647,
+        "title": "Как ускорить ответы от API CHATGPT в телеграм боте?",
+        "url": "https://ru.stackoverflow.com/questions/1496647/%d0%9a%d0%b0%d0%ba-%d1%83%d1%81%d0%ba%d0%be%d1%80%d0%b8%d1%82%d1%8c-%d0%be%d1%82%d0%b2%d0%b5%d1%82%d1%8b-%d0%be%d1%82-api-chatgpt-%d0%b2-%d1%82%d0%b5%d0%bb%d0%b5%d0%b3%d1%80%d0%b0%d0%bc-%d0%b1%d0%be%d1%82%d0%b5",
+        "tags": [
+          "python",
+          "aiogram",
+          "gpt",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "dimonrzhev (https://ru.stackoverflow.com/users/476980/dimonrzhev)",
+        "answer_ids": [
+          1497726
+        ],
+        "answer_authors": [
+          "Сергей Ш (https://ru.stackoverflow.com/users/470333/%d0%a1%d0%b5%d1%80%d0%b3%d0%b5%d0%b9-%d0%a8)"
+        ]
+      },
+      {
+        "question_id": 1544586,
+        "title": "Как сделать так, чтобы бот в телеграмме на Aiogram писал сообщение пользователю по буквам как ChatGPT?",
+        "url": "https://ru.stackoverflow.com/questions/1544586/%d0%9a%d0%b0%d0%ba-%d1%81%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c-%d1%82%d0%b0%d0%ba-%d1%87%d1%82%d0%be%d0%b1%d1%8b-%d0%b1%d0%be%d1%82-%d0%b2-%d1%82%d0%b5%d0%bb%d0%b5%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%b5-%d0%bd%d0%b0-aiogram-%d0%bf%d0%b8%d1%81%d0%b0%d0%bb-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8e",
+        "tags": [
+          "python",
+          "telegram-bot",
+          "aiogram",
+          "chatgpt"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Кирилл Суров (https://ru.stackoverflow.com/users/568634/%d0%9a%d0%b8%d1%80%d0%b8%d0%bb%d0%bb-%d0%a1%d1%83%d1%80%d0%be%d0%b2)",
+        "answer_ids": [
+          1544600
+        ],
+        "answer_authors": [
+          "u n e a s 1 n e s s (https://ru.stackoverflow.com/users/468004/u-n-e-a-s-1-n-e-s-s)"
+        ]
+      },
+      {
+        "question_id": 1541585,
+        "title": "Почему бот отправляет сообщение \"подождите\" и когда уже отправляет ответ, то сообщение изменяется и удаляется?",
+        "url": "https://ru.stackoverflow.com/questions/1541585/%d0%9f%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%b1%d0%be%d1%82-%d0%be%d1%82%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d1%8f%d0%b5%d1%82-%d1%81%d0%be%d0%be%d0%b1%d1%89%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d0%be%d0%b4%d0%be%d0%b6%d0%b4%d0%b8%d1%82%d0%b5-%d0%b8-%d0%ba%d0%be%d0%b3%d0%b4%d0%b0-%d1%83%d0%b6%d0%b5-%d0%be%d1%82%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d1%8f%d0%b5%d1%82-%d0%be%d1%82%d0%b2%d0%b5%d1%82-%d1%82%d0%be-%d1%81%d0%be%d0%be",
+        "tags": [
+          "python",
+          "асинхронность",
+          "python-openai"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "gemf (https://ru.stackoverflow.com/users/561138/gemf)",
+        "answer_ids": [
+          1541715
+        ],
+        "answer_authors": [
+          "gemf (https://ru.stackoverflow.com/users/561138/gemf)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_03_ru_openai_tools_rag_prompts",
+    "order": 3,
+    "title": "OpenAI API: function calling, поиск по документу, DALL-E и база знаний",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1591215,
+        "title": "Как использовать OpenAI function calling python?",
+        "url": "https://ru.stackoverflow.com/questions/1591215/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-openai-function-calling-python",
+        "tags": [
+          "python",
+          "искусственный-интеллект",
+          "python-openai"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "J AR (https://ru.stackoverflow.com/users/574901/j-ar)",
+        "answer_ids": [
+          1591223
+        ],
+        "answer_authors": [
+          "AnnaBazueva (https://ru.stackoverflow.com/users/606213/annabazueva)"
+        ]
+      },
+      {
+        "question_id": 1544689,
+        "title": "(дообучение chatGPT) Как правильно реализовать поиск в google документе?",
+        "url": "https://ru.stackoverflow.com/questions/1544689/%d0%b4%d0%be%d0%be%d0%b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-chatgpt-%d0%9a%d0%b0%d0%ba-%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d1%8c%d0%bd%d0%be-%d1%80%d0%b5%d0%b0%d0%bb%d0%b8%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%be%d0%b8%d1%81%d0%ba-%d0%b2-google-%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b5",
+        "tags": [
+          "python",
+          "google-docs",
+          "chatgpt",
+          "chatgpt-api"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Виталий (https://ru.stackoverflow.com/users/518583/%d0%92%d0%b8%d1%82%d0%b0%d0%bb%d0%b8%d0%b9)",
+        "answer_ids": [
+          1576465
+        ],
+        "answer_authors": [
+          "Трипольский Пётр (https://ru.stackoverflow.com/users/233158/%d0%a2%d1%80%d0%b8%d0%bf%d0%be%d0%bb%d1%8c%d1%81%d0%ba%d0%b8%d0%b9-%d0%9f%d1%91%d1%82%d1%80)"
+        ]
+      },
+      {
+        "question_id": 1608629,
+        "title": "Как создать чат-бот, отвечающий точно на вопросы только на основе базы знаний и дающий в конце ссылку на конкретный пункт из документа базы знаний",
+        "url": "https://ru.stackoverflow.com/questions/1608629/%d0%9a%d0%b0%d0%ba-%d1%81%d0%be%d0%b7%d0%b4%d0%b0%d1%82%d1%8c-%d1%87%d0%b0%d1%82-%d0%b1%d0%be%d1%82-%d0%be%d1%82%d0%b2%d0%b5%d1%87%d0%b0%d1%8e%d1%89%d0%b8%d0%b9-%d1%82%d0%be%d1%87%d0%bd%d0%be-%d0%bd%d0%b0-%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-%d1%82%d0%be%d0%bb%d1%8c%d0%ba%d0%be-%d0%bd%d0%b0-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b5-%d0%b1%d0%b0%d0%b7%d1%8b-%d0%b7%d0%bd%d0%b0%d0%bd%d0%b8%d0%b9-%d0%b8",
+        "tags": [
+          "бот",
+          "chatgpt"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Artur (https://ru.stackoverflow.com/users/590974/artur)",
+        "answer_ids": [
+          1610372
+        ],
+        "answer_authors": [
+          "Qwertiy (https://ru.stackoverflow.com/users/178988/qwertiy)"
+        ]
+      },
+      {
+        "question_id": 1552863,
+        "title": "Математические операции в запросах для DALLE",
+        "url": "https://ru.stackoverflow.com/questions/1552863/%d0%9c%d0%b0%d1%82%d0%b5%d0%bc%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%86%d0%b8%d0%b8-%d0%b2-%d0%b7%d0%b0%d0%bf%d1%80%d0%be%d1%81%d0%b0%d1%85-%d0%b4%d0%bb%d1%8f-dalle",
+        "tags": [
+          "искусственный-интеллект",
+          "openapi",
+          "prompt",
+          "chatgpt"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "eurvanov (https://ru.stackoverflow.com/users/188116/eurvanov)",
+        "answer_ids": [],
+        "answer_authors": []
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_04_ru_llm_hardware_vision",
+    "order": 4,
+    "title": "LLM-модели: выбор железа и GPT Vision в Telegram-боте",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1606069,
+        "title": "Как выбрать параметры железа под LLM модели?",
+        "url": "https://ru.stackoverflow.com/questions/1606069/%d0%9a%d0%b0%d0%ba-%d0%b2%d1%8b%d0%b1%d1%80%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d1%80%d0%b0%d0%bc%d0%b5%d1%82%d1%80%d1%8b-%d0%b6%d0%b5%d0%bb%d0%b5%d0%b7%d0%b0-%d0%bf%d0%be%d0%b4-llm-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8",
+        "tags": [
+          "нейронные-сети",
+          "железо",
+          "gpt",
+          "llm"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Kadenza (https://ru.stackoverflow.com/users/427009/kadenza)",
+        "answer_ids": [
+          1606325
+        ],
+        "answer_authors": [
+          "EvgeniyZ (https://ru.stackoverflow.com/users/220553/evgeniyz)"
+        ]
+      },
+      {
+        "question_id": 1598260,
+        "title": "Gpt vision телеграм бот",
+        "url": "https://ru.stackoverflow.com/questions/1598260/gpt-vision-%d1%82%d0%b5%d0%bb%d0%b5%d0%b3%d1%80%d0%b0%d0%bc-%d0%b1%d0%be%d1%82",
+        "tags": [
+          "python",
+          "telegram-bot",
+          "aiogram-3.x",
+          "chatgpt"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Aldiyar Kambarbekov (https://ru.stackoverflow.com/users/638883/aldiyar-kambarbekov)",
+        "answer_ids": [],
+        "answer_authors": []
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_05_ru_ml_learning_resources",
+    "order": 5,
+    "title": "Книги и учебные ресурсы по машинному обучению",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 678970,
+        "title": "Книги и учебные ресурсы по машинному обучению",
+        "url": "https://ru.stackoverflow.com/questions/678970/%d0%9a%d0%bd%d0%b8%d0%b3%d0%b8-%d0%b8-%d1%83%d1%87%d0%b5%d0%b1%d0%bd%d1%8b%d0%b5-%d1%80%d0%b5%d1%81%d1%83%d1%80%d1%81%d1%8b-%d0%bf%d0%be-%d0%bc%d0%b0%d1%88%d0%b8%d0%bd%d0%bd%d0%be%d0%bc%d1%83-%d0%be%d0%b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d1%8e",
+        "tags": [
+          "математика",
+          "книги",
+          "машинное-обучение"
+        ],
+        "license": "CC BY-SA 3.0",
+        "question_author": "Konstantin Shutko (https://ru.stackoverflow.com/users/254460/konstantin-shutko)",
+        "answer_ids": [
+          683632,
+          678973
+        ],
+        "answer_authors": [
+          "Merlin (https://ru.stackoverflow.com/users/1084/merlin)",
+          "Paulo Berezini (https://ru.stackoverflow.com/users/216198/paulo-berezini)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_06_ru_neural_network_1d_array",
+    "order": 6,
+    "title": "Нейросеть для обработки одномерного массива",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 500809,
+        "title": "Нейросеть для обработки одномерного массива",
+        "url": "https://ru.stackoverflow.com/questions/500809/%d0%9d%d0%b5%d0%b9%d1%80%d0%be%d1%81%d0%b5%d1%82%d1%8c-%d0%b4%d0%bb%d1%8f-%d0%be%d0%b1%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%ba%d0%b8-%d0%be%d0%b4%d0%bd%d0%be%d0%bc%d0%b5%d1%80%d0%bd%d0%be%d0%b3%d0%be-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0",
+        "tags": [
+          "python",
+          "нейронные-сети"
+        ],
+        "license": "CC BY-SA 3.0",
+        "question_author": "Алексей Максимов (https://ru.stackoverflow.com/users/183815/%d0%90%d0%bb%d0%b5%d0%ba%d1%81%d0%b5%d0%b9-%d0%9c%d0%b0%d0%ba%d1%81%d0%b8%d0%bc%d0%be%d0%b2)",
+        "answer_ids": [
+          639097,
+          1280944,
+          638510,
+          638834
+        ],
+        "answer_authors": [
+          "m9_psy (https://ru.stackoverflow.com/users/189819/m9-psy)",
+          "Kseniya Sinickaya (https://ru.stackoverflow.com/users/442798/kseniya-sinickaya)",
+          "Юрий Султанаев (https://ru.stackoverflow.com/users/240087/%d0%ae%d1%80%d0%b8%d0%b9-%d0%a1%d1%83%d0%bb%d1%82%d0%b0%d0%bd%d0%b0%d0%b5%d0%b2)",
+          "Eugene Bartosh (https://ru.stackoverflow.com/users/236181/eugene-bartosh)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_07_ru_sentiment_classifier_comparison",
+    "order": 7,
+    "title": "Сравнение классификаторов для тональной оценки комментариев",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 792931,
+        "title": "Сравнение производительности классификаторов для эмоциональной (тональной) оценки комментариев/твитов",
+        "url": "https://ru.stackoverflow.com/questions/792931/%d0%a1%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d1%80%d0%be%d0%b8%d0%b7%d0%b2%d0%be%d0%b4%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b8%d1%84%d0%b8%d0%ba%d0%b0%d1%82%d0%be%d1%80%d0%be%d0%b2-%d0%b4%d0%bb%d1%8f-%d1%8d%d0%bc%d0%be%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b9-%d1%82%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b9-%d0%be%d1%86%d0%b5%d0%bd%d0%ba",
+        "tags": [
+          "python",
+          "нейронные-сети",
+          "машинное-обучение",
+          "классификация",
+          "естественный-язык"
+        ],
+        "license": "CC BY-SA 3.0",
+        "question_author": "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)",
+        "answer_ids": [
+          792932
+        ],
+        "answer_authors": [
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_08_ru_pandas_no_loops",
+    "order": 8,
+    "title": "Как отучиться использовать циклы в Pandas",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 980705,
+        "title": "Как отучиться использовать циклы в Pandas?",
+        "url": "https://ru.stackoverflow.com/questions/980705/%d0%9a%d0%b0%d0%ba-%d0%be%d1%82%d1%83%d1%87%d0%b8%d1%82%d1%8c%d1%81%d1%8f-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d1%86%d0%b8%d0%ba%d0%bb%d1%8b-%d0%b2-pandas",
+        "tags": [
+          "python",
+          "циклы",
+          "pandas",
+          "group-by"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Vasyl Kolomiets (https://ru.stackoverflow.com/users/239767/vasyl-kolomiets)",
+        "answer_ids": [
+          984881
+        ],
+        "answer_authors": [
+          "Andrey (https://ru.stackoverflow.com/users/213678/andrey)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_09_ru_pandas_consecutive_values",
+    "order": 9,
+    "title": "Подсчёт одинаковых значений, идущих подряд, в Pandas",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1198455,
+        "title": "Как посчитать количество одинаковых значений вектора идущих в ряд?",
+        "url": "https://ru.stackoverflow.com/questions/1198455/%d0%9a%d0%b0%d0%ba-%d0%bf%d0%be%d1%81%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c-%d0%ba%d0%be%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%be-%d0%be%d0%b4%d0%b8%d0%bd%d0%b0%d0%ba%d0%be%d0%b2%d1%8b%d1%85-%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9-%d0%b2%d0%b5%d0%ba%d1%82%d0%be%d1%80%d0%b0-%d0%b8%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d0%b2-%d1%80%d1%8f%d0%b4",
+        "tags": [
+          "python",
+          "pandas",
+          "оптимизация",
+          "numpy",
+          "обработка-данных"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "nick (https://ru.stackoverflow.com/users/406984/nick)",
+        "answer_ids": [
+          1198459,
+          1199243,
+          1199335,
+          1199780,
+          1202319
+        ],
+        "answer_authors": [
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)",
+          "Владислав Харламов (https://ru.stackoverflow.com/users/224217/%d0%92%d0%bb%d0%b0%d0%b4%d0%b8%d1%81%d0%bb%d0%b0%d0%b2-%d0%a5%d0%b0%d1%80%d0%bb%d0%b0%d0%bc%d0%be%d0%b2)",
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)",
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)",
+          "Danis (https://ru.stackoverflow.com/users/400096/danis)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_10_ru_pandas_rolling_average",
+    "order": 10,
+    "title": "Вычисление скользящего среднего в Pandas",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 922246,
+        "title": "Вычислить скользящее среднее",
+        "url": "https://ru.stackoverflow.com/questions/922246/%d0%92%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b8%d1%82%d1%8c-%d1%81%d0%ba%d0%be%d0%bb%d1%8c%d0%b7%d1%8f%d1%89%d0%b5%d0%b5-%d1%81%d1%80%d0%b5%d0%b4%d0%bd%d0%b5%d0%b5",
+        "tags": [
+          "python",
+          "pandas",
+          "машинное-обучение",
+          "dataframe",
+          "numpy"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "bashrc (https://ru.stackoverflow.com/users/295504/bashrc)",
+        "answer_ids": [
+          922259
+        ],
+        "answer_authors": [
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_11_ru_pandas_count_until_value",
+    "order": 11,
+    "title": "Подсчёт количества элементов до заданного значения в Pandas",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1256558,
+        "title": "Как посчитать количество элементов до определенного значения?",
+        "url": "https://ru.stackoverflow.com/questions/1256558/%d0%9a%d0%b0%d0%ba-%d0%bf%d0%be%d1%81%d1%87%d0%b8%d1%82%d0%b0%d1%82%d1%8c-%d0%ba%d0%be%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%be-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%b4%d0%be-%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d0%be%d0%b3%d0%be-%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d1%8f",
+        "tags": [
+          "python",
+          "pandas",
+          "dataframe",
+          "анализ-данных",
+          "обработка-данных"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "ChikChirik (https://ru.stackoverflow.com/users/362663/chikchirik)",
+        "answer_ids": [
+          1258393,
+          1256942
+        ],
+        "answer_authors": [
+          "MaxU - stand with Ukraine (https://ru.stackoverflow.com/users/211923/maxu-stand-with-ukraine)",
+          "strawdog (https://ru.stackoverflow.com/users/311069/strawdog)"
+        ]
+      }
+    ]
+  },
+  {
+    "doc_id": "doc_12_ru_sklearn_validation_regression",
+    "order": 12,
+    "title": "sklearn: train_test_split, отбор признаков и доверительные интервалы регрессии",
+    "site": "ru.stackoverflow.com",
+    "sources": [
+      {
+        "question_id": 1108047,
+        "title": "\"TypeError: Singleton array...cannot be considered a valid collection\" и \"ValueError: Found input ...inconsistent num...samples\" в train_test_split",
+        "url": "https://ru.stackoverflow.com/questions/1108047/typeerror-singleton-array-cannot-be-considered-a-valid-collection-%d0%b8-valuee",
+        "tags": [
+          "python",
+          "python-3.x",
+          "sklearn"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "sqrt495 (https://ru.stackoverflow.com/users/341468/sqrt495)",
+        "answer_ids": [
+          1108061
+        ],
+        "answer_authors": [
+          "CrazyElf (https://ru.stackoverflow.com/users/260769/crazyelf)"
+        ]
+      },
+      {
+        "question_id": 908839,
+        "title": "Машинное обучение. Отбор признаков при построении модели",
+        "url": "https://ru.stackoverflow.com/questions/908839/%d0%9c%d0%b0%d1%88%d0%b8%d0%bd%d0%bd%d0%be%d0%b5-%d0%be%d0%b1%d1%83%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%9e%d1%82%d0%b1%d0%be%d1%80-%d0%bf%d1%80%d0%b8%d0%b7%d0%bd%d0%b0%d0%ba%d0%be%d0%b2-%d0%bf%d1%80%d0%b8-%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b5%d0%bd%d0%b8%d0%b8-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8",
+        "tags": [
+          "python",
+          "машинное-обучение",
+          "scikit-learn"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Ste_kd (https://ru.stackoverflow.com/users/310134/ste-kd)",
+        "answer_ids": [
+          909041,
+          919498
+        ],
+        "answer_authors": [
+          "passant (https://ru.stackoverflow.com/users/254172/passant)",
+          "passant (https://ru.stackoverflow.com/users/254172/passant)"
+        ]
+      },
+      {
+        "question_id": 1283898,
+        "title": "Доверительные интервалы для параметров регрессионной модели в Python",
+        "url": "https://ru.stackoverflow.com/questions/1283898/%d0%94%d0%be%d0%b2%d0%b5%d1%80%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%b8%d0%bd%d1%82%d0%b5%d1%80%d0%b2%d0%b0%d0%bb%d1%8b-%d0%b4%d0%bb%d1%8f-%d0%bf%d0%b0%d1%80%d0%b0%d0%bc%d0%b5%d1%82%d1%80%d0%be%d0%b2-%d1%80%d0%b5%d0%b3%d1%80%d0%b5%d1%81%d1%81%d0%b8%d0%be%d0%bd%d0%bd%d0%be%d0%b9-%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d0%b8-%d0%b2-python",
+        "tags": [
+          "python",
+          "numpy",
+          "статистика",
+          "статический-анализ",
+          "sklearn"
+        ],
+        "license": "CC BY-SA 4.0",
+        "question_author": "Юрий (https://ru.stackoverflow.com/users/284507/%d0%ae%d1%80%d0%b8%d0%b9)",
+        "answer_ids": [
+          1284022,
+          1283970
+        ],
+        "answer_authors": [
+          "Pak Uula (https://ru.stackoverflow.com/users/371023/pak-uula)",
+          "passant (https://ru.stackoverflow.com/users/254172/passant)"
+        ]
+      }
+    ]
+  }
+]

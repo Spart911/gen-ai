@@ -6,9 +6,11 @@ build/
 dist/
 wheels/
 *.egg-info
+chroma_db
 
 # Virtual environments
 .venv
+
 
 # env
 .env

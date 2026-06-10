@@ -1,0 +1,818 @@
+{
+  "fixed": {
+    "strategy": "fixed",
+    "dense_only": false,
+    "k": 5,
+    "mean": 1.0,
+    "total_hits": 15.0,
+    "questions": 15,
+    "chunk_count": 85,
+    "avg_gold_rank": 1.17,
+    "results": [
+      {
+        "id": 1,
+        "type": "multi-hop / синоним",
+        "question": "Хочу чат-бота, который отвечает только по моей базе знаний, не фантазирует и при этом помнит историю диалога. Какие обсуждения корпуса помогут?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "retrieved_ids": [
+          "doc_03_ru_openai_tools_rag_prompts__4",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_05_ru_ml_learning_resources__1",
+          "doc_02_ru_chatgpt_bot_streaming__4",
+          "doc_04_ru_llm_hardware_vision__1"
+        ],
+        "retrieved_sources": [
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_01_ru_openai_context_memory",
+          "doc_05_ru_ml_learning_resources",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "gold_ranks": [
+          2,
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "type": "прямой",
+        "question": "Что нужно передавать в messages, чтобы GPT-бот сохранял контекст предыдущих сообщений?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory"
+        ],
+        "retrieved_ids": [
+          "doc_01_ru_openai_context_memory__6",
+          "doc_01_ru_openai_context_memory__4",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_01_ru_openai_context_memory__8",
+          "doc_01_ru_openai_context_memory__9"
+        ],
+        "retrieved_sources": [
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "type": "перефраз",
+        "question": "Почему ChatGPT API может начать отвечать самому себе и генерировать текст, пока не закончатся токены?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory"
+        ],
+        "retrieved_ids": [
+          "doc_01_ru_openai_context_memory__2",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_02_ru_chatgpt_bot_streaming__0",
+          "doc_01_ru_openai_context_memory__3",
+          "doc_01_ru_openai_context_memory__4"
+        ],
+        "retrieved_sources": [
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "type": "прямой",
+        "question": "Как сделать, чтобы Telegram-бот на aiogram печатал ответ по буквам, как ChatGPT?",
+        "score": 1.0,
+        "gold": [
+          "doc_02_ru_chatgpt_bot_streaming"
+        ],
+        "retrieved_ids": [
+          "doc_02_ru_chatgpt_bot_streaming__0",
+          "doc_02_ru_chatgpt_bot_streaming__4",
+          "doc_03_ru_openai_tools_rag_prompts__1",
+          "doc_02_ru_chatgpt_bot_streaming__2",
+          "doc_01_ru_openai_context_memory__7"
+        ],
+        "retrieved_sources": [
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_01_ru_openai_context_memory"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 5,
+        "type": "точный артикул",
+        "question": "Как использовать OpenAI function calling в Python?",
+        "score": 1.0,
+        "gold": [
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "retrieved_ids": [
+          "doc_03_ru_openai_tools_rag_prompts__0",
+          "doc_03_ru_openai_tools_rag_prompts__1",
+          "doc_01_ru_openai_context_memory__7",
+          "doc_02_ru_chatgpt_bot_streaming__3",
+          "doc_12_ru_sklearn_validation_regression__5"
+        ],
+        "retrieved_sources": [
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_01_ru_openai_context_memory",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "type": "multi-hop",
+        "question": "Как размер контекстного окна связан и с ограничениями токенов в ChatGPT API, и с требованиями к VRAM при локальном запуске LLM?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory",
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "retrieved_ids": [
+          "doc_04_ru_llm_hardware_vision__0",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_04_ru_llm_hardware_vision__2",
+          "doc_01_ru_openai_context_memory__4",
+          "doc_02_ru_chatgpt_bot_streaming__0"
+        ],
+        "retrieved_sources": [
+          "doc_04_ru_llm_hardware_vision",
+          "doc_01_ru_openai_context_memory",
+          "doc_04_ru_llm_hardware_vision",
+          "doc_01_ru_openai_context_memory",
+          "doc_02_ru_chatgpt_bot_streaming"
+        ],
+        "gold_ranks": [
+          2,
+          1
+        ]
+      },
+      {
+        "id": 7,
+        "type": "прямой",
+        "question": "Как понять, сколько видеопамяти нужно для локального запуска LLM-модели?",
+        "score": 1.0,
+        "gold": [
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "retrieved_ids": [
+          "doc_04_ru_llm_hardware_vision__2",
+          "doc_04_ru_llm_hardware_vision__1",
+          "doc_04_ru_llm_hardware_vision__0",
+          "doc_05_ru_ml_learning_resources__1",
+          "doc_05_ru_ml_learning_resources__7"
+        ],
+        "retrieved_sources": [
+          "doc_04_ru_llm_hardware_vision",
+          "doc_04_ru_llm_hardware_vision",
+          "doc_04_ru_llm_hardware_vision",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "type": "прямой",
+        "question": "Какие книги и учебные ресурсы советуют для изучения машинного обучения?",
+        "score": 1.0,
+        "gold": [
+          "doc_05_ru_ml_learning_resources"
+        ],
+        "retrieved_ids": [
+          "doc_05_ru_ml_learning_resources__13",
+          "doc_05_ru_ml_learning_resources__0",
+          "doc_05_ru_ml_learning_resources__12",
+          "doc_05_ru_ml_learning_resources__1",
+          "doc_05_ru_ml_learning_resources__3"
+        ],
+        "retrieved_sources": [
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "type": "синоним",
+        "question": "Как оценить похожесть двух числовых последовательностей без отдельной нейросети?",
+        "score": 1.0,
+        "gold": [
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "retrieved_ids": [
+          "doc_06_ru_neural_network_1d_array__3",
+          "doc_06_ru_neural_network_1d_array__2",
+          "doc_06_ru_neural_network_1d_array__4",
+          "doc_03_ru_openai_tools_rag_prompts__6",
+          "doc_03_ru_openai_tools_rag_prompts__5"
+        ],
+        "retrieved_sources": [
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "type": "прямой",
+        "question": "Какие классификаторы сравнивались для тональной оценки комментариев и твитов?",
+        "score": 1.0,
+        "gold": [
+          "doc_07_ru_sentiment_classifier_comparison"
+        ],
+        "retrieved_ids": [
+          "doc_07_ru_sentiment_classifier_comparison__0",
+          "doc_03_ru_openai_tools_rag_prompts__5",
+          "doc_03_ru_openai_tools_rag_prompts__4",
+          "doc_07_ru_sentiment_classifier_comparison__1",
+          "doc_06_ru_neural_network_1d_array__2"
+        ],
+        "retrieved_sources": [
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "type": "multi-hop / перефраз",
+        "question": "Как в pandas избавиться от вложенных циклов при группировках и подсчёте подряд идущих значений?",
+        "score": 1.0,
+        "gold": [
+          "doc_08_ru_pandas_no_loops",
+          "doc_09_ru_pandas_consecutive_values"
+        ],
+        "retrieved_ids": [
+          "doc_08_ru_pandas_no_loops__0",
+          "doc_09_ru_pandas_consecutive_values__0",
+          "doc_08_ru_pandas_no_loops__3",
+          "doc_06_ru_neural_network_1d_array__1",
+          "doc_11_ru_pandas_count_until_value__0"
+        ],
+        "retrieved_sources": [
+          "doc_08_ru_pandas_no_loops",
+          "doc_09_ru_pandas_consecutive_values",
+          "doc_08_ru_pandas_no_loops",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_11_ru_pandas_count_until_value"
+        ],
+        "gold_ranks": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "type": "прямой",
+        "question": "Как вычислить скользящее среднее в pandas и что делать с None или слишком большими числами?",
+        "score": 1.0,
+        "gold": [
+          "doc_10_ru_pandas_rolling_average"
+        ],
+        "retrieved_ids": [
+          "doc_10_ru_pandas_rolling_average__0",
+          "doc_08_ru_pandas_no_loops__0",
+          "doc_12_ru_sklearn_validation_regression__7",
+          "doc_07_ru_sentiment_classifier_comparison__3",
+          "doc_11_ru_pandas_count_until_value__0"
+        ],
+        "retrieved_sources": [
+          "doc_10_ru_pandas_rolling_average",
+          "doc_08_ru_pandas_no_loops",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_11_ru_pandas_count_until_value"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 13,
+        "type": "перефраз",
+        "question": "Как посчитать количество элементов до наступления определённого значения в DataFrame?",
+        "score": 1.0,
+        "gold": [
+          "doc_11_ru_pandas_count_until_value"
+        ],
+        "retrieved_ids": [
+          "doc_11_ru_pandas_count_until_value__0",
+          "doc_11_ru_pandas_count_until_value__1",
+          "doc_11_ru_pandas_count_until_value__3",
+          "doc_11_ru_pandas_count_until_value__2",
+          "doc_06_ru_neural_network_1d_array__3"
+        ],
+        "retrieved_sources": [
+          "doc_11_ru_pandas_count_until_value",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "type": "точный артикул",
+        "question": "Почему train_test_split падает с ошибками Singleton array и inconsistent samples, если в коде переиспользуется переменная y?",
+        "score": 1.0,
+        "gold": [
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "retrieved_ids": [
+          "doc_12_ru_sklearn_validation_regression__2",
+          "doc_12_ru_sklearn_validation_regression__0",
+          "doc_12_ru_sklearn_validation_regression__3",
+          "doc_12_ru_sklearn_validation_regression__1",
+          "doc_07_ru_sentiment_classifier_comparison__3"
+        ],
+        "retrieved_sources": [
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_07_ru_sentiment_classifier_comparison"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "type": "прямой",
+        "question": "Как найти доверительные интервалы для коэффициентов линейной регрессии в Python?",
+        "score": 1.0,
+        "gold": [
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "retrieved_ids": [
+          "doc_12_ru_sklearn_validation_regression__7",
+          "doc_12_ru_sklearn_validation_regression__6",
+          "doc_06_ru_neural_network_1d_array__3",
+          "doc_06_ru_neural_network_1d_array__4",
+          "doc_06_ru_neural_network_1d_array__2"
+        ],
+        "retrieved_sources": [
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      }
+    ]
+  },
+  "recursive": {
+    "strategy": "recursive",
+    "dense_only": false,
+    "k": 5,
+    "mean": 1.0,
+    "total_hits": 15.0,
+    "questions": 15,
+    "chunk_count": 594,
+    "avg_gold_rank": 1.72,
+    "results": [
+      {
+        "id": 1,
+        "type": "multi-hop / синоним",
+        "question": "Хочу чат-бота, который отвечает только по моей базе знаний, не фантазирует и при этом помнит историю диалога. Какие обсуждения корпуса помогут?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "retrieved_ids": [
+          "doc_03_ru_openai_tools_rag_prompts__24",
+          "doc_01_ru_openai_context_memory__17",
+          "doc_01_ru_openai_context_memory__4",
+          "doc_03_ru_openai_tools_rag_prompts__32",
+          "doc_03_ru_openai_tools_rag_prompts__30"
+        ],
+        "retrieved_sources": [
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "gold_ranks": [
+          2,
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "type": "прямой",
+        "question": "Что нужно передавать в messages, чтобы GPT-бот сохранял контекст предыдущих сообщений?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory"
+        ],
+        "retrieved_ids": [
+          "doc_01_ru_openai_context_memory__63",
+          "doc_01_ru_openai_context_memory__67",
+          "doc_01_ru_openai_context_memory__73",
+          "doc_03_ru_openai_tools_rag_prompts__40",
+          "doc_01_ru_openai_context_memory__0"
+        ],
+        "retrieved_sources": [
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_01_ru_openai_context_memory"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "type": "перефраз",
+        "question": "Почему ChatGPT API может начать отвечать самому себе и генерировать текст, пока не закончатся токены?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory"
+        ],
+        "retrieved_ids": [
+          "doc_01_ru_openai_context_memory__17",
+          "doc_02_ru_chatgpt_bot_streaming__1",
+          "doc_02_ru_chatgpt_bot_streaming__0",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_02_ru_chatgpt_bot_streaming__29"
+        ],
+        "retrieved_sources": [
+          "doc_01_ru_openai_context_memory",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_01_ru_openai_context_memory",
+          "doc_02_ru_chatgpt_bot_streaming"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "type": "прямой",
+        "question": "Как сделать, чтобы Telegram-бот на aiogram печатал ответ по буквам, как ChatGPT?",
+        "score": 1.0,
+        "gold": [
+          "doc_02_ru_chatgpt_bot_streaming"
+        ],
+        "retrieved_ids": [
+          "doc_02_ru_chatgpt_bot_streaming__9",
+          "doc_02_ru_chatgpt_bot_streaming__14",
+          "doc_02_ru_chatgpt_bot_streaming__1",
+          "doc_02_ru_chatgpt_bot_streaming__4",
+          "doc_01_ru_openai_context_memory__63"
+        ],
+        "retrieved_sources": [
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_02_ru_chatgpt_bot_streaming",
+          "doc_01_ru_openai_context_memory"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 5,
+        "type": "точный артикул",
+        "question": "Как использовать OpenAI function calling в Python?",
+        "score": 1.0,
+        "gold": [
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "retrieved_ids": [
+          "doc_03_ru_openai_tools_rag_prompts__1",
+          "doc_03_ru_openai_tools_rag_prompts__4",
+          "doc_03_ru_openai_tools_rag_prompts__8",
+          "doc_03_ru_openai_tools_rag_prompts__0",
+          "doc_03_ru_openai_tools_rag_prompts__6"
+        ],
+        "retrieved_sources": [
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "type": "multi-hop",
+        "question": "Как размер контекстного окна связан и с ограничениями токенов в ChatGPT API, и с требованиями к VRAM при локальном запуске LLM?",
+        "score": 1.0,
+        "gold": [
+          "doc_01_ru_openai_context_memory",
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "retrieved_ids": [
+          "doc_01_ru_openai_context_memory__17",
+          "doc_01_ru_openai_context_memory__0",
+          "doc_01_ru_openai_context_memory__63",
+          "doc_01_ru_openai_context_memory__34",
+          "doc_04_ru_llm_hardware_vision__5"
+        ],
+        "retrieved_sources": [
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_01_ru_openai_context_memory",
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "gold_ranks": [
+          1,
+          5
+        ]
+      },
+      {
+        "id": 7,
+        "type": "прямой",
+        "question": "Как понять, сколько видеопамяти нужно для локального запуска LLM-модели?",
+        "score": 1.0,
+        "gold": [
+          "doc_04_ru_llm_hardware_vision"
+        ],
+        "retrieved_ids": [
+          "doc_04_ru_llm_hardware_vision__17",
+          "doc_04_ru_llm_hardware_vision__4",
+          "doc_04_ru_llm_hardware_vision__21",
+          "doc_11_ru_pandas_count_until_value__12",
+          "doc_03_ru_openai_tools_rag_prompts__23"
+        ],
+        "retrieved_sources": [
+          "doc_04_ru_llm_hardware_vision",
+          "doc_04_ru_llm_hardware_vision",
+          "doc_04_ru_llm_hardware_vision",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_03_ru_openai_tools_rag_prompts"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 8,
+        "type": "прямой",
+        "question": "Какие книги и учебные ресурсы советуют для изучения машинного обучения?",
+        "score": 1.0,
+        "gold": [
+          "doc_05_ru_ml_learning_resources"
+        ],
+        "retrieved_ids": [
+          "doc_05_ru_ml_learning_resources__1",
+          "doc_05_ru_ml_learning_resources__87",
+          "doc_05_ru_ml_learning_resources__85",
+          "doc_05_ru_ml_learning_resources__8",
+          "doc_05_ru_ml_learning_resources__78"
+        ],
+        "retrieved_sources": [
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources",
+          "doc_05_ru_ml_learning_resources"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 9,
+        "type": "синоним",
+        "question": "Как оценить похожесть двух числовых последовательностей без отдельной нейросети?",
+        "score": 1.0,
+        "gold": [
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "retrieved_ids": [
+          "doc_06_ru_neural_network_1d_array__16",
+          "doc_06_ru_neural_network_1d_array__25",
+          "doc_06_ru_neural_network_1d_array__38",
+          "doc_06_ru_neural_network_1d_array__36",
+          "doc_06_ru_neural_network_1d_array__24"
+        ],
+        "retrieved_sources": [
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array",
+          "doc_06_ru_neural_network_1d_array"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 10,
+        "type": "прямой",
+        "question": "Какие классификаторы сравнивались для тональной оценки комментариев и твитов?",
+        "score": 1.0,
+        "gold": [
+          "doc_07_ru_sentiment_classifier_comparison"
+        ],
+        "retrieved_ids": [
+          "doc_07_ru_sentiment_classifier_comparison__1",
+          "doc_07_ru_sentiment_classifier_comparison__0",
+          "doc_07_ru_sentiment_classifier_comparison__14",
+          "doc_01_ru_openai_context_memory__6",
+          "doc_07_ru_sentiment_classifier_comparison__7"
+        ],
+        "retrieved_sources": [
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_07_ru_sentiment_classifier_comparison",
+          "doc_01_ru_openai_context_memory",
+          "doc_07_ru_sentiment_classifier_comparison"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 11,
+        "type": "multi-hop / перефраз",
+        "question": "Как в pandas избавиться от вложенных циклов при группировках и подсчёте подряд идущих значений?",
+        "score": 1.0,
+        "gold": [
+          "doc_08_ru_pandas_no_loops",
+          "doc_09_ru_pandas_consecutive_values"
+        ],
+        "retrieved_ids": [
+          "doc_08_ru_pandas_no_loops__21",
+          "doc_08_ru_pandas_no_loops__1",
+          "doc_08_ru_pandas_no_loops__24",
+          "doc_08_ru_pandas_no_loops__4",
+          "doc_09_ru_pandas_consecutive_values__0"
+        ],
+        "retrieved_sources": [
+          "doc_08_ru_pandas_no_loops",
+          "doc_08_ru_pandas_no_loops",
+          "doc_08_ru_pandas_no_loops",
+          "doc_08_ru_pandas_no_loops",
+          "doc_09_ru_pandas_consecutive_values"
+        ],
+        "gold_ranks": [
+          1,
+          5
+        ]
+      },
+      {
+        "id": 12,
+        "type": "прямой",
+        "question": "Как вычислить скользящее среднее в pandas и что делать с None или слишком большими числами?",
+        "score": 1.0,
+        "gold": [
+          "doc_10_ru_pandas_rolling_average"
+        ],
+        "retrieved_ids": [
+          "doc_08_ru_pandas_no_loops__1",
+          "doc_08_ru_pandas_no_loops__4",
+          "doc_08_ru_pandas_no_loops__0",
+          "doc_11_ru_pandas_count_until_value__11",
+          "doc_10_ru_pandas_rolling_average__1"
+        ],
+        "retrieved_sources": [
+          "doc_08_ru_pandas_no_loops",
+          "doc_08_ru_pandas_no_loops",
+          "doc_08_ru_pandas_no_loops",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_10_ru_pandas_rolling_average"
+        ],
+        "gold_ranks": [
+          5
+        ]
+      },
+      {
+        "id": 13,
+        "type": "перефраз",
+        "question": "Как посчитать количество элементов до наступления определённого значения в DataFrame?",
+        "score": 1.0,
+        "gold": [
+          "doc_11_ru_pandas_count_until_value"
+        ],
+        "retrieved_ids": [
+          "doc_11_ru_pandas_count_until_value__1",
+          "doc_09_ru_pandas_consecutive_values__1",
+          "doc_11_ru_pandas_count_until_value__12",
+          "doc_08_ru_pandas_no_loops__36",
+          "doc_12_ru_sklearn_validation_regression__49"
+        ],
+        "retrieved_sources": [
+          "doc_11_ru_pandas_count_until_value",
+          "doc_09_ru_pandas_consecutive_values",
+          "doc_11_ru_pandas_count_until_value",
+          "doc_08_ru_pandas_no_loops",
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 14,
+        "type": "точный артикул",
+        "question": "Почему train_test_split падает с ошибками Singleton array и inconsistent samples, если в коде переиспользуется переменная y?",
+        "score": 1.0,
+        "gold": [
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "retrieved_ids": [
+          "doc_12_ru_sklearn_validation_regression__1",
+          "doc_12_ru_sklearn_validation_regression__4",
+          "doc_12_ru_sklearn_validation_regression__14",
+          "doc_12_ru_sklearn_validation_regression__13",
+          "doc_12_ru_sklearn_validation_regression__20"
+        ],
+        "retrieved_sources": [
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      },
+      {
+        "id": 15,
+        "type": "прямой",
+        "question": "Как найти доверительные интервалы для коэффициентов линейной регрессии в Python?",
+        "score": 1.0,
+        "gold": [
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "retrieved_ids": [
+          "doc_12_ru_sklearn_validation_regression__39",
+          "doc_12_ru_sklearn_validation_regression__43",
+          "doc_12_ru_sklearn_validation_regression__59",
+          "doc_12_ru_sklearn_validation_regression__49",
+          "doc_12_ru_sklearn_validation_regression__57"
+        ],
+        "retrieved_sources": [
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression",
+          "doc_12_ru_sklearn_validation_regression"
+        ],
+        "gold_ranks": [
+          1
+        ]
+      }
+    ]
+  }
+}

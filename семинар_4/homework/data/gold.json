@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "type": "multi-hop / синоним",
+    "question": "Хочу чат-бота, который отвечает только по моей базе знаний, не фантазирует и при этом помнит историю диалога. Какие обсуждения корпуса помогут?",
+    "gold_sources": [
+      "doc_01_ru_openai_context_memory",
+      "doc_03_ru_openai_tools_rag_prompts"
+    ],
+    "note": "сложный: нужно связать ограничение ответов темой, ChromaDB/базу знаний и память диалога из двух документов"
+  },
+  {
+    "id": 2,
+    "type": "прямой",
+    "question": "Что нужно передавать в messages, чтобы GPT-бот сохранял контекст предыдущих сообщений?",
+    "gold_sources": [
+      "doc_01_ru_openai_context_memory"
+    ],
+    "note": "прямое упоминание параметра messages и предыдущих сообщений пользователя"
+  },
+  {
+    "id": 3,
+    "type": "перефраз",
+    "question": "Почему ChatGPT API может начать отвечать самому себе и генерировать текст, пока не закончатся токены?",
+    "gold_sources": [
+      "doc_01_ru_openai_context_memory"
+    ],
+    "note": "перефраз треда про зацикливание ответа и расход токенов"
+  },
+  {
+    "id": 4,
+    "type": "прямой",
+    "question": "Как сделать, чтобы Telegram-бот на aiogram печатал ответ по буквам, как ChatGPT?",
+    "gold_sources": [
+      "doc_02_ru_chatgpt_bot_streaming"
+    ],
+    "note": "прямой вопрос про эффект постепенного вывода сообщения"
+  },
+  {
+    "id": 5,
+    "type": "точный артикул",
+    "question": "Как использовать OpenAI function calling в Python?",
+    "gold_sources": [
+      "doc_03_ru_openai_tools_rag_prompts"
+    ],
+    "note": "точное техническое выражение function calling"
+  },
+  {
+    "id": 6,
+    "type": "multi-hop",
+    "question": "Как размер контекстного окна связан и с ограничениями токенов в ChatGPT API, и с требованиями к VRAM при локальном запуске LLM?",
+    "gold_sources": [
+      "doc_01_ru_openai_context_memory",
+      "doc_04_ru_llm_hardware_vision"
+    ],
+    "note": "сложный: API-токены и локальная VRAM обсуждаются в разных документах"
+  },
+  {
+    "id": 7,
+    "type": "прямой",
+    "question": "Как понять, сколько видеопамяти нужно для локального запуска LLM-модели?",
+    "gold_sources": [
+      "doc_04_ru_llm_hardware_vision"
+    ],
+    "note": "документ обсуждает параметры модели, квантизацию, контекст и VRAM"
+  },
+  {
+    "id": 8,
+    "type": "прямой",
+    "question": "Какие книги и учебные ресурсы советуют для изучения машинного обучения?",
+    "gold_sources": [
+      "doc_05_ru_ml_learning_resources"
+    ],
+    "note": "прямой вопрос по треду со списком ресурсов"
+  },
+  {
+    "id": 9,
+    "type": "синоним",
+    "question": "Как оценить похожесть двух числовых последовательностей без отдельной нейросети?",
+    "gold_sources": [
+      "doc_06_ru_neural_network_1d_array"
+    ],
+    "note": "слова похожесть/последовательности переформулируют обсуждение косинусной близости и расстояний между векторами"
+  },
+  {
+    "id": 10,
+    "type": "прямой",
+    "question": "Какие классификаторы сравнивались для тональной оценки комментариев и твитов?",
+    "gold_sources": [
+      "doc_07_ru_sentiment_classifier_comparison"
+    ],
+    "note": "в документе перечислены SGDClassifier, MultinomialNB, SVC, MLPClassifier и другие модели"
+  },
+  {
+    "id": 11,
+    "type": "multi-hop / перефраз",
+    "question": "Как в pandas избавиться от вложенных циклов при группировках и подсчёте подряд идущих значений?",
+    "gold_sources": [
+      "doc_08_ru_pandas_no_loops",
+      "doc_09_ru_pandas_consecutive_values"
+    ],
+    "note": "сложный: общий подход split-apply-combine в одном документе, конкретный подсчёт последовательных значений в другом"
+  },
+  {
+    "id": 12,
+    "type": "прямой",
+    "question": "Как вычислить скользящее среднее в pandas и что делать с None или слишком большими числами?",
+    "gold_sources": [
+      "doc_10_ru_pandas_rolling_average"
+    ],
+    "note": "прямой вопрос по треду о rolling mean"
+  },
+  {
+    "id": 13,
+    "type": "перефраз",
+    "question": "Как посчитать количество элементов до наступления определённого значения в DataFrame?",
+    "gold_sources": [
+      "doc_11_ru_pandas_count_until_value"
+    ],
+    "note": "перефраз заголовка треда про количество элементов до заданного значения"
+  },
+  {
+    "id": 14,
+    "type": "точный артикул",
+    "question": "Почему train_test_split падает с ошибками Singleton array и inconsistent samples, если в коде переиспользуется переменная y?",
+    "gold_sources": [
+      "doc_12_ru_sklearn_validation_regression"
+    ],
+    "note": "точные фрагменты ошибок из sklearn и причина с переиспользованием y"
+  },
+  {
+    "id": 15,
+    "type": "прямой",
+    "question": "Как найти доверительные интервалы для коэффициентов линейной регрессии в Python?",
+    "gold_sources": [
+      "doc_12_ru_sklearn_validation_regression"
+    ],
+    "note": "прямой вопрос по треду о доверительных интервалах параметров регрессионной модели"
+  }
+]

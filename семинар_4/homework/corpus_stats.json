@@ -1,0 +1,98 @@
+[
+  {
+    "doc_id": "doc_01_ru_openai_context_memory",
+    "file": "data/doc_01_ru_openai_context_memory.md",
+    "title": "ChatGPT API: контекст, память диалога и зацикливание ответов",
+    "chars": 18033,
+    "words": 2288,
+    "threads_in_doc": 4
+  },
+  {
+    "doc_id": "doc_02_ru_chatgpt_bot_streaming",
+    "file": "data/doc_02_ru_chatgpt_bot_streaming.md",
+    "title": "ChatGPT в Telegram-ботах: скорость ответа, печать по буквам и асинхронность",
+    "chars": 10163,
+    "words": 1372,
+    "threads_in_doc": 3
+  },
+  {
+    "doc_id": "doc_03_ru_openai_tools_rag_prompts",
+    "file": "data/doc_03_ru_openai_tools_rag_prompts.md",
+    "title": "OpenAI API: function calling, поиск по документу, DALL-E и база знаний",
+    "chars": 12475,
+    "words": 1794,
+    "threads_in_doc": 4
+  },
+  {
+    "doc_id": "doc_04_ru_llm_hardware_vision",
+    "file": "data/doc_04_ru_llm_hardware_vision.md",
+    "title": "LLM-модели: выбор железа и GPT Vision в Telegram-боте",
+    "chars": 13255,
+    "words": 1714,
+    "threads_in_doc": 2
+  },
+  {
+    "doc_id": "doc_05_ru_ml_learning_resources",
+    "file": "data/doc_05_ru_ml_learning_resources.md",
+    "title": "Книги и учебные ресурсы по машинному обучению",
+    "chars": 26433,
+    "words": 3465,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_06_ru_neural_network_1d_array",
+    "file": "data/doc_06_ru_neural_network_1d_array.md",
+    "title": "Нейросеть для обработки одномерного массива",
+    "chars": 11783,
+    "words": 1915,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_07_ru_sentiment_classifier_comparison",
+    "file": "data/doc_07_ru_sentiment_classifier_comparison.md",
+    "title": "Сравнение классификаторов для тональной оценки комментариев",
+    "chars": 13705,
+    "words": 1752,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_08_ru_pandas_no_loops",
+    "file": "data/doc_08_ru_pandas_no_loops.md",
+    "title": "Как отучиться использовать циклы в Pandas",
+    "chars": 9926,
+    "words": 1355,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_09_ru_pandas_consecutive_values",
+    "file": "data/doc_09_ru_pandas_consecutive_values.md",
+    "title": "Подсчёт одинаковых значений, идущих подряд, в Pandas",
+    "chars": 8468,
+    "words": 1368,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_10_ru_pandas_rolling_average",
+    "file": "data/doc_10_ru_pandas_rolling_average.md",
+    "title": "Вычисление скользящего среднего в Pandas",
+    "chars": 6364,
+    "words": 1104,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_11_ru_pandas_count_until_value",
+    "file": "data/doc_11_ru_pandas_count_until_value.md",
+    "title": "Подсчёт количества элементов до заданного значения в Pandas",
+    "chars": 8615,
+    "words": 1688,
+    "threads_in_doc": 1
+  },
+  {
+    "doc_id": "doc_12_ru_sklearn_validation_regression",
+    "file": "data/doc_12_ru_sklearn_validation_regression.md",
+    "title": "sklearn: train_test_split, отбор признаков и доверительные интервалы регрессии",
+    "chars": 16718,
+    "words": 2212,
+    "threads_in_doc": 3
+  }
+]
