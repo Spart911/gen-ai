@@ -21,6 +21,7 @@ import argparse
 import datetime
 import json
 import sys
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from json.decoder import JSONDecodeError
 from pathlib import Path
@@ -32,7 +33,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from llm_client import get_model, make_client, make_raw_client
 from schemas import TOOL_SCHEMAS
-from tools import calculate, get_fx_rate, get_inflation, get_key_rate, get_unemployment
+from tools import (
+    calculate,
+    compare_periods,
+    get_fx_rate,
+    get_inflation,
+    get_key_rate,
+    get_unemployment,
+)
 
 # набор инструментов
 TOOLS_IMPL = {
@@ -40,15 +48,18 @@ TOOLS_IMPL = {
     "get_key_rate": get_key_rate,
     "get_inflation": get_inflation,
     "get_unemployment": get_unemployment,
+    "compare_periods": compare_periods,
     "calculate": calculate,
 }
+
+TRACE_PATH = Path(__file__).resolve().parent / "trace.jsonl"
 
 
 # блок 7 — структурированный ответ
 class AgentAnswer(BaseModel):
-    answer: str = Field(description="Ответ человеку, одна-две фразы")
-    value: Optional[float] = Field(default=None, description="Главное число ответа")
-    unit: Optional[str] = Field(default=None, description="Единица: %, руб, год")
+    answer: str = Field(description="Human-readable answer, one or two sentences")
+    value: Optional[float] = Field(default=None, description="Main numeric answer")
+    unit: Optional[str] = Field(default=None, description="Unit: %, rub, year")
     sources: list[str] = Field(default_factory=list)
     confidence: float = Field(ge=0, le=1)
 
@@ -57,8 +68,8 @@ SUBMIT_SCHEMA = {
     "type": "function",
     "function": {
         "name": "submit_answer",
-        "description": "Вызови ТОЛЬКО когда данных достаточно для финального ответа. "
-        "Передай ответ структурой, не текстом.",
+        "description": "Call ONLY when there is enough data for the final answer. "
+        "Submit the answer as a structured object, not as plain text.",
         "parameters": {
             "type": "object",
             "properties": {
@@ -80,10 +91,10 @@ class CriticVerdict(BaseModel):
     issue: str = ""
 
 
-CRITIC_SYSTEM = """Ты — придирчивый ревизор. Тебе дают финальный ответ агента и
-лог инструментов. Проверь ОДНО: выводится ли число в ответе из данных
-инструментов, без выдумки. ok=false, если число не подтверждается логом или
-арифметика не сходится. issue — одна фраза, что не так."""
+CRITIC_SYSTEM = """You are a meticulous reviewer. You receive the agent's final answer and
+the tool log. Check ONE thing: does the number in the answer follow from the tool
+data, without fabrication? ok=false if the number is not confirmed by the log or
+the arithmetic does not add up. issue — one sentence explaining what is wrong."""
 
 
 # блок 9 — кэш детерминированных инструментов (живёт в пределах процесса).
@@ -96,46 +107,66 @@ PRICE_OUT_PER_MTOK = 0.28
 
 
 _BASE_RULES = """\
-Ты — макроэкономический аналитик с данными Цб РФ и Росстата. ЧИСЛА НИКОГДА НЕ
-ПРИДУМЫВАЙ — получай их через инструменты.
+You are a macroeconomic analyst with Bank of Russia and Rosstat data. NEVER
+INVENT NUMBERS — obtain them via tools.
 
-Инструменты:
-- get_fx_rate: курс валюты к рублю на дату
-- get_key_rate: ключевая ставка Цб на дату
-- get_inflation: ИПЦ (% г/г) на конец месяца
-- get_unemployment: безработица (% рабочей силы) на конец месяца
-- calculate: безопасный калькулятор для арифметики над полученными числами
+Tools:
+- get_fx_rate: currency-to-ruble exchange rate on a date
+- get_key_rate: Bank of Russia key rate on a date
+- get_inflation: CPI (% y/y) at month-end
+- get_unemployment: unemployment (% of labor force) at month-end
+- compare_periods: compare one metric across two periods (delta, ratio)
+- calculate: safe calculator for arithmetic on obtained numbers
 
-Алгоритм:
-1. Разложи вопрос: какие числа нужны и в каком порядке. Если несколько чисел
-   независимы — запрашивай их в одном шаге (несколько вызовов сразу).
-2. Арифметику считай ТОЛЬКО через calculate.
-3. Реальная ставка = номинальная ставка − инфляция г/г.
-4. Реальная доходность вклада ≈ (1 + ставка/100) / (1 + инфляция/100) − 1.
-5. Индекс нищеты = инфляция г/г + безработица.
-6. Кросс-курс «сколько B за 1 A» = (рублей за 1 A) / (рублей за 1 B).
-   Пример: «юаней за доллар» = (рублей за доллар) / (рублей за юань).
+Algorithm:
+1. Break down the question: which numbers are needed and in what order. If
+   several numbers are independent — request them in one step (multiple calls at once).
+2. Do arithmetic ONLY via calculate.
+3. Real rate = nominal rate − y/y inflation.
+4. Real deposit return ≈ (1 + rate/100) / (1 + inflation/100) − 1.
+5. Misery index = y/y inflation + unemployment.
+6. Cross-rate "how many B per 1 A" = (rubles per 1 A) / (rubles per 1 B).
+   Example: "yuan per dollar" = (rubles per dollar) / (rubles per yuan).
 """
 
 SYSTEM_PROMPT = (
     _BASE_RULES
     + """\
-7. Когда данных достаточно — выдай финальный ответ обычным текстом бЕЗ вызовов
-   инструментов. Одна-две фразы, с числами и единицами. Если число из
-   fallback_csv — оговорись, что Цб в моменте недоступен.
-Формат даты — YYYY-MM-DD.
-Текущая дата: {}
+7. When there is enough data — give the final answer as plain text WITHOUT tool
+   calls. One or two sentences, with numbers and units. If a number comes from
+   fallback_csv — note that the Bank of Russia is momentarily unavailable.
+Date format — YYYY-MM-DD.
+Current date: {}
 """.format(datetime.datetime.now().strftime("%Y-%m-%d"))
 )
 
 SYSTEM_PROMPT_PRO = (
     _BASE_RULES
     + """\
-7. Когда данных достаточно — НЕ пиши текст, а вызови submit_answer со структурой
-   (answer, value, unit, sources, confidence).
-Формат даты — YYYY-MM-DD.
+7. When there is enough data — do NOT write text; call submit_answer with
+   structure (answer, value, unit, sources, confidence).
+Date format — YYYY-MM-DD.
 """
 )
+
+
+def _trace_ts() -> str:
+    return datetime.datetime.now().isoformat(timespec="seconds")
+
+
+def _append_trace_line(path: Path, record: dict) -> None:
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def _log_trace_event(
+    path: Optional[Path],
+    run_id: str,
+    event: dict,
+) -> None:
+    if path is None:
+        return
+    _append_trace_line(path, {"run_id": run_id, "ts": _trace_ts(), **event})
 
 
 def _exec_one(tc, cache: Optional[dict] = None) -> tuple[Any, dict, dict]:
@@ -145,11 +176,11 @@ def _exec_one(tc, cache: Optional[dict] = None) -> tuple[Any, dict, dict]:
     try:
         args = json.loads(tc.function.arguments or "{}")
     except JSONDecodeError as e:
-        return tc, {}, {"error": f"битый json аргументов: {e}"}
+        return tc, {}, {"error": f"malformed tool arguments JSON: {e}"}
 
     fn = TOOLS_IMPL.get(name)
     if fn is None:
-        return tc, args, {"error": f"неизвестный инструмент: {name}"}
+        return tc, args, {"error": f"unknown tool: {name}"}
 
     key = name + ":" + json.dumps(args, sort_keys=True, ensure_ascii=False)
     if cache is not None and key in cache:
@@ -163,7 +194,7 @@ def _exec_one(tc, cache: Optional[dict] = None) -> tuple[Any, dict, dict]:
             tc,
             args,
             {
-                "error": f"плохие аргументы для {name}: {e}. Expected: {fn.__annotations__}"
+                "error": f"bad arguments for {name}: {e}. Expected: {fn.__annotations__}"
             },
         )
     except Exception as e:
@@ -191,8 +222,8 @@ def critique(answer: AgentAnswer, tool_log: list[dict]) -> CriticVerdict:
             {"role": "system", "content": CRITIC_SYSTEM},
             {
                 "role": "user",
-                "content": f"Ответ агента: «{answer.answer}» (value={answer.value} {answer.unit}).\n"
-                f"Лог инструментов:\n{facts or '(пусто)'}",
+                "content": f"Agent answer: «{answer.answer}» (value={answer.value} {answer.unit}).\n"
+                f"Tool log:\n{facts or '(empty)'}",
             },
         ],
     )
@@ -250,6 +281,8 @@ def run_agent(
     use_cache: bool = False,
     track_cost: bool = False,
     verbose: bool = True,
+    trace_path: Optional[Path] = None,
+    run_id: Optional[str] = None,
 ) -> dict[str, Any]:
     """ReAct-цикл. базовый режим — финал текстом; флаги включают блоки 6-10."""
     client = make_raw_client()
@@ -257,6 +290,7 @@ def run_agent(
     tools = TOOL_SCHEMAS + ([SUBMIT_SCHEMA] if structured else [])
     system = SYSTEM_PROMPT_PRO if structured else SYSTEM_PROMPT
     cache = TOOL_CACHE if use_cache else None
+    run_id = run_id or str(uuid.uuid4())
     messages: list[dict[str, Any]] = [
         {"role": "system", "content": system},
         {"role": "user", "content": user_query},
@@ -294,13 +328,16 @@ def run_agent(
             print(f"[step {step}] {names or 'финал-текст'}")
 
         if not msg.tool_calls:
-            trace.append({"step": step, "final": msg.content})
+            final_event = {"step": step, "final": msg.content}
+            trace.append(final_event)
+            _log_trace_event(trace_path, run_id, final_event)
             return _finish(
                 {
                     "answer": msg.content,
                     "structured": None,
                     "trace": trace,
                     "steps": step,
+                    "run_id": run_id,
                 },
                 usage_log,
                 track_cost=track_cost,
@@ -328,9 +365,14 @@ def run_agent(
                         "content": json.dumps(obs, ensure_ascii=False),
                     }
                 )
-                trace.append(
-                    {"step": step, "call": tc.function.name, "args": args, "obs": obs}
-                )
+                tool_event = {
+                    "step": step,
+                    "call": tc.function.name,
+                    "args": args,
+                    "obs": obs,
+                }
+                trace.append(tool_event)
+                _log_trace_event(trace_path, run_id, tool_event)
                 if verbose:
                     print(
                         f"    {tc.function.name}({args}) -> {json.dumps(obs, ensure_ascii=False)[:140]}"
@@ -345,7 +387,7 @@ def run_agent(
                     {
                         "role": "tool",
                         "tool_call_id": submit.id,
-                        "content": f"submit_answer невалиден: {e}. Исправь.",
+                        "content": f"submit_answer invalid: {e}. Fix it.",
                     }
                 )
                 continue
@@ -358,20 +400,24 @@ def run_agent(
                         {
                             "role": "tool",
                             "tool_call_id": submit.id,
-                            "content": f"Ревизор отклонил: {verdict.issue}. "
-                            f"Перепроверь и вызови submit_answer заново.",
+                            "content": f"Reviewer rejected: {verdict.issue}. "
+                            f"Double-check and call submit_answer again.",
                         }
                     )
                     continue
             messages.append(
-                {"role": "tool", "tool_call_id": submit.id, "content": "ответ принят"}
+                {"role": "tool", "tool_call_id": submit.id, "content": "answer accepted"}
             )
+            final_event = {"step": step, "final": ans.answer}
+            trace.append(final_event)
+            _log_trace_event(trace_path, run_id, final_event)
             return _finish(
                 {
                     "answer": ans.answer,
                     "structured": ans,
                     "trace": trace,
                     "steps": step,
+                    "run_id": run_id,
                 },
                 usage_log,
                 track_cost=track_cost,
@@ -379,6 +425,13 @@ def run_agent(
                 verbose=verbose,
             )
 
+    error_event = {
+        "step": max_iter,
+        "final": None,
+        "error": f"исчерпан лимит шагов max_iter={max_iter}",
+    }
+    trace.append(error_event)
+    _log_trace_event(trace_path, run_id, error_event)
     return _finish(
         {
             "answer": None,
@@ -386,6 +439,7 @@ def run_agent(
             "trace": trace,
             "steps": max_iter,
             "error": f"исчерпан лимит шагов max_iter={max_iter}",
+            "run_id": run_id,
         },
         usage_log,
         track_cost=track_cost,
@@ -424,7 +478,17 @@ def main():
         action="store_true",
         help="блок 10: показать токены и стоимость по шагам",
     )
-    ap.add_argument("--trace", type=Path, default=None, help="Куда сохранить JSON-лог")
+    ap.add_argument(
+        "--trace",
+        type=Path,
+        default=TRACE_PATH,
+        help="Куда писать JSONL-лог шагов (по умолчанию trace.jsonl)",
+    )
+    ap.add_argument(
+        "--no-trace",
+        action="store_true",
+        help="Не писать trace.jsonl",
+    )
     a = ap.parse_args()
 
     q = " ".join(a.query)
@@ -437,6 +501,7 @@ def main():
         use_critic=a.critic,
         use_cache=a.cache,
         track_cost=a.cost,
+        trace_path=None if a.no_trace else a.trace,
     )
 
     print("\n=== ВОПРОС ===")

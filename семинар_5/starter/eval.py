@@ -1,5 +1,5 @@
 """
-Мини-оценка: 4 вопроса, проверяем:
+Мини-оценка: 10 вопросов, проверяем:
 1. Что агент завершает работу за разумное число шагов.
 2. Что в трассе шагов есть ожидаемые инструменты.
 3. Что в финальном ответе упомянуты ожидаемые ключевые числа (опционально).
@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from agent import CACHE_STATS, run_agent
+from agent import CACHE_STATS, TRACE_PATH, run_agent
 
 CASES = [
     {
@@ -44,6 +44,62 @@ CASES = [
         "must_have": ["год"],
         "comment": "Вычисление с формулой: 72 / ставка = годы.",
     },
+    {
+        "id": 5,
+        "query": "Во сколько раз вырос курс USD с января 2022 по апрель 2026?",
+        "expected_tools": ["compare_periods"],
+        "must_have": ["раз"],
+        "comment": "compare_periods: сравнение fx_USD между двумя месяцами, ratio в ответе.",
+    },
+    {
+        "id": 6,
+        "query": "На сколько процентных пунктов изменилась ключевая ставка с марта 2022 по июнь 2024?",
+        "expected_tools": ["compare_periods"],
+        "must_have": ["процент"],
+        "comment": "compare_periods: key_rate, delta в п.п.; агент должен взять delta, не ratio.",
+    },
+    {
+        "id": 7,
+        "query": "Какая была инфляция в феврале? (имеется в виду последний полный февраль)",
+        "expected_tools": ["get_inflation"],
+        "must_have": ["%"],
+        "comment": (
+            "Трудный: неоднозначная дата — агент должен сам выбрать год последнего "
+            "полного февраля, а не текущий незавершённый месяц."
+        ),
+    },
+    {
+        "id": 8,
+        "query": "Сравни инфляцию и безработицу в марте 2024: что выше в процентных пунктах?",
+        "expected_tools": ["get_inflation", "get_unemployment", "calculate"],
+        "must_have": ["%"],
+        "comment": (
+            "Трудный: две разные метрики за один месяц + арифметика; агент может "
+            "перепутать единицы или вызвать compare_periods вместо двух get_*."
+        ),
+    },
+    {
+        "id": 9,
+        "query": "Сколько юаней за один доллар по официальному кросс-курсу ЦБ сегодня?",
+        "expected_tools": ["get_fx_rate", "calculate"],
+        "must_have": ["юан"],
+        "comment": "Реальный вопрос: кросс-курс USD/CNY через рублёвые котировки ЦБ.",
+    },
+    {
+        "id": 10,
+        "query": "Что сейчас выше: ключевая ставка ЦБ или индекс нищеты (инфляция плюс безработица)?",
+        "expected_tools": [
+            "get_key_rate",
+            "get_inflation",
+            "get_unemployment",
+            "calculate",
+        ],
+        "must_have": ["%"],
+        "comment": (
+            "Реальный вопрос: три индикатора и сравнение составного показателя "
+            "с номинальной ставкой."
+        ),
+    },
 ]
 
 
@@ -55,6 +111,7 @@ def run_case(case: dict, *, use_cache: bool = False, track_cost: bool = False) -
         verbose=True,
         use_cache=use_cache,
         track_cost=track_cost,
+        trace_path=TRACE_PATH,
     )
     used_tools = [e["call"] for e in res["trace"] if "call" in e]
     answer = res.get("answer") or ""

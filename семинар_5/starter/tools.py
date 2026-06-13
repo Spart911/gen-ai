@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import calendar
 import csv
 import re
 import urllib.error
@@ -45,6 +46,83 @@ def _parse_date(s: str | None) -> _date:
     if isinstance(s, _date):
         return s
     return datetime.strptime(s, "%Y-%m-%d").date()
+
+
+_PERIOD_RE = re.compile(r"^\d{4}-\d{2}(-\d{2})?$")
+_COMPARE_METRICS = {
+    "key_rate",
+    "fx_USD",
+    "fx_EUR",
+    "fx_CNY",
+    "cpi",
+    "unemployment",
+}
+
+
+def _parse_period(period: str) -> tuple[str, int, int]:
+    """YYYY-MM или YYYY-MM-DD → (iso_date, year, month)."""
+    period = period.strip()
+    if not _PERIOD_RE.match(period):
+        raise ValueError(f"период должен быть YYYY-MM или YYYY-MM-DD, получено: {period!r}")
+    if len(period) == 7:
+        year, month = map(int, period.split("-"))
+        last_day = calendar.monthrange(year, month)[1]
+        d = _date(year, month, last_day)
+    else:
+        d = datetime.strptime(period, "%Y-%m-%d").date()
+        year, month = d.year, d.month
+    return d.isoformat(), year, month
+
+
+def _fetch_metric_point(metric: str, period: str) -> dict:
+    """Одна точка метрики: {date, value, source} или {error}."""
+    try:
+        iso_date, year, month = _parse_period(period)
+    except ValueError as e:
+        return {"error": str(e)}
+
+    if metric == "key_rate":
+        obs = get_key_rate(on_date=iso_date)
+        if "error" in obs:
+            return obs
+        return {
+            "date": obs["date"],
+            "value": float(obs["rate"]),
+            "source": obs.get("source", "unknown"),
+        }
+
+    if metric.startswith("fx_"):
+        currency = metric.split("_", 1)[1]
+        obs = get_fx_rate(currency=currency, on_date=iso_date)
+        if "error" in obs:
+            return obs
+        return {
+            "date": obs["date"],
+            "value": float(obs["rate"]),
+            "source": obs.get("source", "unknown"),
+        }
+
+    if metric == "cpi":
+        obs = get_inflation(year, month)
+        if "error" in obs:
+            return obs
+        return {
+            "date": f"{year}-{month:02d}",
+            "value": float(obs["cpi_yoy"]),
+            "source": obs.get("source", "rosstat_csv"),
+        }
+
+    if metric == "unemployment":
+        obs = get_unemployment(year, month)
+        if "error" in obs:
+            return obs
+        return {
+            "date": f"{year}-{month:02d}",
+            "value": float(obs["unemployment"]),
+            "source": obs.get("source", "rosstat_csv"),
+        }
+
+    return {"error": f"неизвестная метрика: {metric}"}
 
 
 # ===========================================================================
@@ -261,7 +339,60 @@ def get_unemployment(year: int, month: int) -> dict:
 
 
 # ===========================================================================
-# 4. Калькулятор
+# 5. Сравнение метрик между периодами
+# ===========================================================================
+
+
+def compare_periods(metric: str, period_a: str, period_b: str) -> dict:
+    """
+    Сравнить значение метрики в двух периодах.
+
+    Args:
+        metric: key_rate | fx_USD | fx_EUR | fx_CNY | cpi | unemployment
+        period_a: YYYY-MM или YYYY-MM-DD
+        period_b: YYYY-MM или YYYY-MM-DD
+
+    Returns:
+        {"metric": ..., "a": {"date": ..., "value": ...},
+         "b": {"date": ..., "value": ...},
+         "delta": b.value - a.value,
+         "ratio": b.value / a.value,
+         "source": "..."}
+    """
+    metric = metric.strip()
+    if metric not in _COMPARE_METRICS:
+        return {
+            "error": (
+                f"неизвестная метрика: {metric}. "
+                f"Допустимо: {', '.join(sorted(_COMPARE_METRICS))}"
+            )
+        }
+
+    point_a = _fetch_metric_point(metric, period_a)
+    if "error" in point_a:
+        return {"error": f"период a ({period_a}): {point_a['error']}"}
+
+    point_b = _fetch_metric_point(metric, period_b)
+    if "error" in point_b:
+        return {"error": f"период b ({period_b}): {point_b['error']}"}
+
+    va, vb = point_a["value"], point_b["value"]
+    if va == 0:
+        return {"error": "значение периода a равно 0, ratio не определён"}
+
+    sources = sorted({point_a["source"], point_b["source"]})
+    return {
+        "metric": metric,
+        "a": {"date": point_a["date"], "value": va},
+        "b": {"date": point_b["date"], "value": vb},
+        "delta": round(vb - va, 6),
+        "ratio": round(vb / va, 6),
+        "source": "+".join(sources),
+    }
+
+
+# ===========================================================================
+# 6. Калькулятор
 # ===========================================================================
 
 
